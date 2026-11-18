@@ -1,0 +1,123 @@
+[
+    {
+        "id": 1,
+        "nama": "Thunder Coaster",
+        "kategori": "Ekstrim",
+        "deskripsi": "Wahana ini menawarkan sensasi kecepatan tinggi dan tikungan tajam yang memacu adrenalin. Cocok untuk pengunjung yang mencari tantangan ekstrem.",
+        "harga": 100,
+        "kapasitas": 20,
+        "durasi": 120,
+        "status": "tersedia"
+    },
+    {
+        "id": 2,
+        "nama": "Ferris Wheel",
+        "kategori": "Santai",
+        "deskripsi": "Wahana ini memberikan pengalaman santai dengan pemandangan indah dari ketinggian. Cocok untuk keluarga dan pengunjung yang ingin bersantai.",
+        "harga": 50,
+        "kapasitas": 40,
+        "durasi": 180,
+        "status": "tersedia"
+    },
+    {
+        "id": 3,
+        "nama": "Haunted House",
+        "kategori": "Horror",
+        "deskripsi": "Wahana ini menawarkan pengalaman menegangkan dengan efek suara dan visual yang menyeramkan. Cocok untuk pengunjung yang menyukai sensasi horor.",
+        "harga": 70,
+        "kapasitas": 15,
+        "durasi": 150,
+        "status": "tersedia"
+    
+    },
+    {
+        "id": 4,
+        "nama": "Bumper Cars",
+        "kategori": "Santai",
+        "deskripsi": "Wahana ini memberikan pengalaman menyenangkan dengan mobil-mobil kecil yang dapat ditabrakkan satu sama lain. Cocok untuk keluarga dan anak-anak.",
+        "harga": 35,
+        "kapasitas": 30,
+        "durasi": 180,
+        "status": "tersedia"
+    },
+    {
+        "id": 5,
+        "nama": "Drop Tower",
+        "kategori": "Ekstrim",
+        "deskripsi": "Wahana ini menawarkan sensasi jatuh bebas dari ketinggian yang menegangkan. Cocok untuk pengunjung yang mencari tantangan ekstrem.",
+        "harga": 45,
+        "kapasitas": 10,
+        "durasi": 90,
+        "status": "tersedia"
+    },
+    {
+        "id": 6,
+        "nama": "Carousel",
+        "kategori": "Santai",
+        "deskripsi": "Wahana ini memberikan pengalaman klasik dengan kuda-kuda berputar yang indah. Cocok untuk keluarga dan anak-anak.",
+        "harga": 60,
+        "kapasitas": 25,
+        "durasi": 120,
+        "status": "tersedia"
+    },
+    {
+        "id": 7,
+        "nama": "Water Slide",
+        "kategori": "Ekstrim",
+        "deskripsi": "Wahana ini menawarkan sensasi meluncur di atas air dengan kecepatan tinggi. Cocok untuk pengunjung yang mencari keseruan dan tantangan.",
+        "harga": 80,
+        "kapasitas": 15,
+        "durasi": 150,
+        "status": "tersedia"
+    },
+    {
+        "id": 8,
+        "nama": "Mini Golf",
+        "kategori": "Santai",
+        "deskripsi": "Wahana ini memberikan pengalaman bermain golf mini yang menyenangkan. Cocok untuk keluarga dan pengunjung yang ingin bersantai.",
+        "harga": 75,
+        "kapasitas": 20,
+        "durasi": 180,
+        "status": "tersedia"
+    },
+    {
+        "id": 9,
+        "nama": "Rock Climbing",
+        "kategori": "Ekstrim",
+        "deskripsi": "Wahana ini menawarkan pengalaman memanjat tebing buatan dengan berbagai tingkat kesulitan. Cocok untuk pengunjung yang mencari tantangan fisik.",
+        "harga": 90,
+        "kapasitas": 10,
+        "durasi": 120,
+        "status": "tersedia"
+    },
+    {
+        "id": 10,
+        "nama": "Virtual Reality Experience",
+        "kategori": "Teknologi",
+        "deskripsi": "Wahana ini memberikan pengalaman imersif melalui teknologi virtual reality. Cocok untuk pengunjung yang ingin merasakan sensasi baru dan inovatif.",
+        "harga": 120,
+        "kapasitas": 5,
+        "durasi": 60,
+        "status": "tersedia"
+    },
+    {
+        "id": 11,
+        "nama": "Sky Swing",
+        "kategori": "Ekstrim",
+        "deskripsi": "Wahana ini menawarkan sensasi melayang di udara dengan ayunan yang tinggi. Cocok untuk pengunjung yang mencari pengalaman menegangkan.",
+        "harga": 65,
+        "kapasitas": 15,
+        "durasi": 90,
+        "status": "tersedia"
+    },
+    {
+        "id": 12,
+        "nama": "Laser Tag Arena",
+        "kategori": "Teknologi",
+        "deskripsi": "Wahana ini memberikan pengalaman bermain laser tag dengan strategi dan kecepatan. Cocok untuk pengunjung yang menyukai tantangan dan kompetisi.",
+        "harga": 80,
+        "kapasitas": 20,
+        "durasi": 120,
+        "status": "tersedia"
+    }
+]
