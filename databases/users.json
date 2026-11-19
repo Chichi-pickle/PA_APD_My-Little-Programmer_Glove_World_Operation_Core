@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "username": "AdminGacor1408_",
+        "password": "AdminGacor1408_",
+        "role": "admin",
+        "coin": 1000000
+    },
+    {
+        "id": 2,
+        "username": "Spongebob_DaBob190",
+        "password": "Spongebob_DaBob190",
+        "role": "pengguna",
+        "coin": 10000
+    }
+]
