@@ -30,7 +30,9 @@ def menu_utama():
                 "3. Tentang GloveWorld",
                 "4. Exit",
             ],
-        ).execute()   
+        ).execute()
+    return pilihan
+       
 
 def menu_pengunjung():
     print(f"{Fore.CYAN}{Style.BRIGHT}===== Menu Pengunjung =====")
