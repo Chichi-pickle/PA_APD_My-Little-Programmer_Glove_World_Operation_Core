@@ -1,4 +1,4 @@
-from utiloi import menu_CRUD
+from utility import menu_CRUD
 
 def main():
     while True:

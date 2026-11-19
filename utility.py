@@ -72,8 +72,11 @@ def menu_CRUD():
         ],
     ).execute()
 
-def validasi_panjang_input(input_str, min_teks, max_teks):
-    if len(input_str) < min_teks or len(input_str) > max_teks:
-        print(f"{Fore.RED}[GAGAL!] Input harus antara {min_teks} dan {max_teks} karakter. Coba lagi.")
+def validasi_panjang_input(input_str, min_teks = 4, max_teks = 20):
+    if len(input_str) < min_teks:
+        print(f"{Fore.RED}[GAGAL!] Input minimal {min_teks} karakter. Coba lagi.")
+        return False
+    if len(input_str) > max_teks:
+        print(f"{Fore.RED}[GAGAL!] Input maksimal {max_teks} karakter. Coba lagi.")
         return False
     return True
