@@ -1,25 +1,16 @@
-from utility import menu_CRUD
-
-def main():
-    while True:
-        pilihan = menu_CRUD()
-        if pilihan == "1. Tambah Wahana":
-            print("Anda memilih untuk menambah wahana.")
-            # Tambahkan logika untuk menambah wahana di sini
-        elif pilihan == "2. Edit harga/kapasitas":
-            print("Anda memilih untuk mengedit harga/kapasitas wahana.")
-            # Tambahkan logika untuk mengedit harga/kapasitas di sini
-        elif pilihan == "3. Hapus Wahana":
-            print("Anda memilih untuk menghapus wahana.")
-            # Tambahkan logika untuk menghapus wahana di sini
-        elif pilihan == "4. Update Status":
-            print("Anda memilih untuk memperbarui status wahana.")
-            # Tambahkan logika untuk memperbarui status di sini
-        elif pilihan == "5. Kembali ke Menu Admin":
-            print("Kembali ke Menu Admin.")
-            break  # Keluar dari loop dan kembali ke menu admin
-        else:
-            print("Pilihan tidak valid. Silakan coba lagi.")
+import utility
 
 if __name__ == "__main__":
-  main()
+    while True:
+        pilihan_menu = utility.menu_utama()
+        if pilihan_menu == "1. Login":
+           print("Login")
+        elif pilihan_menu == "2. Register":
+            print("Register")
+        elif pilihan_menu == "3. Tentang GloveWorld":
+            print("Tentang GloveWorld")
+        elif pilihan_menu == "4. Exit":
+            print("Exiting...")
+            break
+        else:
+            print("Pilihan tidak valid. Silakan coba lagi.")
