@@ -12,7 +12,7 @@ def grafik_wahana_favorit(riwayat_list):
         if nama_wahana:
             frekuensi[nama_wahana] = frekuensi.get(nama_wahana, 0) + 1
 
-    print(f"\n{Fore.CYAN}{Style.BRIGHT}=== Grafik Frekuensi Wahana Kesukaan Pengunjung ===")
+    print(f"\n{Fore.CYAN}{Style.BRIGHT}==== Grafik Frekuensi Wahana Kesukaan Pengunjung ====")
     if len(frekuensi) == 0:
         print(f"{Fore.YELLOW}Belum ada data riwayat booking.")
         return
@@ -36,7 +36,7 @@ def edit_akun_admin(admin_data, cek_username_ganda, user_list=None):
         if not validasi_panjang_input(username_baru, 4, 15):
             continue
         if cek_username_ganda(username_baru, id_admin):
-            print(f"{Fore.RED}[GAGAL!]Username sudah dipakai.")
+            print(f"{Fore.RED}[GAGAL!] Username sudah dipakai.")
             continue
         break
 
