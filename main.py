@@ -1,9 +1,10 @@
 import menu
 import utility
-import pengunjungZ
+import pengguna
 from datetime import datetime
 
 if __name__ == "__main__":
+    WAKTU_MULAI = datetime.now()
     while True:
         pilihan_menu = menu.menu_utama()
         if pilihan_menu == "1. Login":
@@ -14,17 +15,38 @@ if __name__ == "__main__":
                         while True:
                             pilihan_pengguna = menu.menu_pengguna()
                             if pilihan_pengguna == "1. Lihat Wahana":
-                                utility.tampilkan_wahana(wahana_list = utility.load_data("wahana.json"))
-                                utility.clear_screen()
-                            elif pilihan_pengguna == "2. Booking Wahana":
-                                pengunjungZ.booking_wahana(user, wahana_list = utility.load_data("wahana.json"), riwayat_list = utility.load_data("riwayat.json"), waktu_mulai = datetime.now(), tampilkan_wahana = utility.tampilkan_wahana)
-                                utility.clear_screen()
+                              utility.tampilkan_wahana(wahana_list = utility.load_data("wahana.json"))
+                              utility.clear_screen()
+                            elif pilihan_pengguna == "2. Booking Wahana": #datanya masih belum ke isi.
+                              wahana_list = utility.load_data("wahana.json")
+                              riwayat_list = utility.load_data("history.json")
+                              
+                              pengguna.booking_wahana(user, wahana_list, riwayat_list, WAKTU_MULAI)
+                              
+                              utility.save_data("users.json", users)
+                              utility.save_data("wahana.json", wahana_list)
+                              utility.save_data("history.json", riwayat_list)
+                              utility.clear_screen()
                             elif pilihan_pengguna  == "3. Riwayat Booking":
-                                print("Riwayat Booking")
+                              wahana_list = utility.load_data("wahana.json")
+                              riwayat_list = utility.load_data("history.json")
+                              
+                              pengguna.riwayat_booking(user, wahana_list, riwayat_list, WAKTU_MULAI)
+                              utility.clear_screen()
                             elif pilihan_pengguna == "4. Edit Profile":
-                                print("Edit Profile")
+                              pengguna.edit_akun_pengunjung(
+                                   user,
+                                   cek_username_ganda=lambda username_baru, user_aktif: any(
+                                        u.get("username") == username_baru and u.get("id", u.get("username")) != user_aktif
+                                        for u in users
+                                   ),
+                              )
+                              utility.save_data("users.json", users)
+                              utility.clear_screen()
                             elif pilihan_pengguna == "5. Top-up Koin":
-                                print("Top-up Koin")
+                              pengguna.top_up(user)
+                              utility.save_data("users.json", users)
+                              utility.clear_screen()
                             elif pilihan_pengguna == "6. Logout":
                                 print("Terimakasih telah menggunakan layanan kami, sampai jumpa lagi!!")
                                 utility.clear_screen()

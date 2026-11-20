@@ -15,7 +15,7 @@
         "kategori": "Santai",
         "deskripsi": "Wahana ini memberikan pengalaman santai dengan pemandangan indah dari ketinggian. Cocok untuk keluarga dan pengunjung yang ingin bersantai.",
         "harga": 50,
-        "kapasitas": 40,
+        "kapasitas": 39,
         "durasi": 180,
         "status": "tersedia"
     },
@@ -28,7 +28,6 @@
         "kapasitas": 15,
         "durasi": 150,
         "status": "tersedia"
-    
     },
     {
         "id": 4,
@@ -46,7 +45,7 @@
         "kategori": "Ekstrim",
         "deskripsi": "Wahana ini menawarkan sensasi jatuh bebas dari ketinggian yang menegangkan. Cocok untuk pengunjung yang mencari tantangan ekstrem.",
         "harga": 45,
-        "kapasitas": 10,
+        "kapasitas": 9,
         "durasi": 90,
         "status": "tersedia"
     },

@@ -1,1 +1,18 @@
-[]
+[
+    {
+        "id_user": 2,
+        "id_wahana": 2,
+        "wahana": "Ferris Wheel",
+        "waktu_mulai": "2026-11-20 04:04:22",
+        "waktu_selesai": "2026-11-20 07:04:22",
+        "status": "aktif"
+    },
+    {
+        "id_user": 2,
+        "id_wahana": 5,
+        "wahana": "Drop Tower",
+        "waktu_mulai": "2026-11-20 04:22:34",
+        "waktu_selesai": "2026-11-20 05:52:34",
+        "status": "aktif"
+    }
+]

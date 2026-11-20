@@ -1,16 +1,16 @@
 [
-  {
-    "id": 1,
-    "username": "adm",
-    "password": "1231",
-    "role": "admin",
-    "coin": 1000000
-  },
-  {
-    "id": 2,
-    "username": "usr",
-    "password": "123",
-    "role": "pengguna",
-    "coin": 10000
-  }
+    {
+        "id": 1,
+        "username": "admin",
+        "password": "1231",
+        "role": "admin",
+        "coin": 1000000
+    },
+    {
+        "id": 2,
+        "username": "syantiq",
+        "password": "123",
+        "role": "pengguna",
+        "coin": 22283
+    }
 ]
