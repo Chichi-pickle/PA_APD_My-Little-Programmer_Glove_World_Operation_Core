@@ -32,6 +32,37 @@ def login(users_list):
     print(f"{Fore.RED}[GAGAL!] Username atau password salah.")
     return None
 
+def register(users_list):
+    print(f"\n{Fore.CYAN}{Style.BRIGHT}=== Register Akun Baru GloveWorld ===")
+
+    while True:
+        username = input("Masukkan username baru: ").strip()
+        if not validasi_panjang_input(username, 4, 15):
+            continue
+        if any(u.get("username") == username for u in users_list):
+            print(f"{Fore.RED}[GAGAL!] Username '{username}' sudah digunakan. Pilih yang lain.")
+            continue
+        break
+
+    while True:
+        password = input("Masukkan password baru: ").strip()
+        if not validasi_panjang_input(password, 6, 20):
+            continue
+        break
+
+    id_baru = max((u.get("id", 0) for u in users_list), default=0) + 1
+
+    user_baru = {
+        "id": id_baru,
+        "username": username,
+        "password": password,
+        "role": "pengguna",
+        "coin": 0
+    }
+
+    users_list.append(user_baru)
+    print(f"{Fore.GREEN}Registrasi berhasil! Akun '{username}' siap digunakan untuk login.")
+
 def clear_screen():
     input(f"\n{Fore.YELLOW}Tekan Enter untuk melanjutkan...")
     os.system('cls' if os.name == 'nt' else 'clear')
