@@ -43,7 +43,7 @@ def booking_wahana(user, wahana_list, riwayat_list, waktu_mulai, tampilkan_wahan
     print(f"{Fore.GREEN}Booking anda telah berhasil, kami menunggu kedatangan anda.")
 
 def top_up(user):
-    print(f"\n{Fore.CYAN}{Style.BRIGHT}=== Top-Up Koin ===")
+    print(f"\n{Fore.CYAN}{Style.BRIGHT}==== Top-Up Koin ====")
     print(f"Jumlah koin saat ini: {Fore.YELLOW}{user.get('coin', 0)}")
 
     while True:
@@ -56,7 +56,7 @@ def top_up(user):
     print(f"{Fore.GREEN}Top-up berhasil! Saldo koin terbaru: {user['coin']}.")
 
 def riwayat_booking(user, wahana_list, riwayat_list, waktu_mulai, perbarui_slot=None):
-    print(f"\n{Fore.CYAN}{Style.BRIGHT}=== Riwayat Booking ===")
+    print(f"\n{Fore.CYAN}{Style.BRIGHT}==== Riwayat Booking ====")
     if callable(perbarui_slot):
         perbarui_slot(wahana_list, riwayat_list, waktu_mulai)
         
@@ -96,7 +96,7 @@ def riwayat_booking(user, wahana_list, riwayat_list, waktu_mulai, perbarui_slot=
     print(tabel)
 
 def edit_akun_pengunjung(user, cek_username_ganda):
-    print(f"\n{Fore.CYAN}{Style.BRIGHT}=== Edit Akun Pengunjung ===")
+    print(f"\n{Fore.CYAN}{Style.BRIGHT}==== Edit Akun Pengunjung ====")
     username_lama = user["username"]
     password_lama = user["password"]
     user_aktif = user.get("id", username_lama)
