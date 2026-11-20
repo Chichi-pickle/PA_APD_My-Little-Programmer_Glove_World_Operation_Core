@@ -5,6 +5,7 @@ from utility import input_angka_rekursif, validasi_panjang_input, waktu_simulasi
 
 init(autoreset = True)
 
+
 def booking_wahana(user, wahana_list, riwayat_list, waktu_mulai, tampilkan_wahana):
     print(f"\n{Fore.CYAN}{Style.BRIGHT}==== Booking Wahana ====")
     tampilkan_wahana(wahana_list)
