@@ -12,5 +12,12 @@
         "password": "123",
         "role": "pengguna",
         "coin": 3
+    },
+    {
+        "id": 3,
+        "username": "ahmad",
+        "password": "134567",
+        "role": "pengguna",
+        "coin": 0
     }
 ]

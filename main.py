@@ -86,12 +86,15 @@ if __name__ == "__main__":
                               print("Pilihan tidak valid. Silakan coba lagi.") 
 
         elif pilihan_menu == "2. Register":
-            utility.load_data("users.json")
-            utility.register(users)
-            utility.save_data("users.json", users)
-            utility.clear_screen()
+          users = utility.load_data("users.json")
+          utility.register(users)
+          utility.save_data("users.json", users)
+          utility.clear_screen()
+
         elif pilihan_menu == "3. Tentang GloveWorld":
-            print("Tentang GloveWorld")
+            utility.tentang_gloveworld()
+            utility.tampilkan_wahana(wahana_list = utility.load_data("wahana.json"))
+            utility.clear_screen()
         elif pilihan_menu == "4. Exit":
             print("Exiting...")
             break
