@@ -12,9 +12,9 @@ def grafik_wahana_favorit(riwayat_list):
         if nama_wahana:
             frekuensi[nama_wahana] = frekuensi.get(nama_wahana, 0) + 1
 
-    print(f"\n{Fore.CYAN}{Style.BRIGHT}==== Grafik Frekuensi Wahana Kesukaan Pengunjung ====")
+    print(f"\n{Fore.CYAN}{Style.BRIGHT}=== Grafik Frekuensi Wahana Kesukaan Pengunjung ===")
     if len(frekuensi) == 0:
-        print(f"{Fore.YELLOW}Belum ada data riwayat booking.")
+        print(f"{Fore.YELLOW}{Style.BRIGHT}Belum ada data riwayat booking.")
         return
 
     tabel = PrettyTable()
@@ -23,7 +23,7 @@ def grafik_wahana_favorit(riwayat_list):
         tabel.add_row([nama_wahana, jumlah, "*" * jumlah])
     print(tabel)
 
-def edit_akun_admin(admin_data, cek_username_ganda, user_list=None):
+def edit_akun_admin(admin_data, cek_username_ganda):
     username_lama = admin_data["username"]
     password_lama = admin_data["password"]
     id_admin = admin_data.get("id", username_lama)
@@ -36,7 +36,7 @@ def edit_akun_admin(admin_data, cek_username_ganda, user_list=None):
         if not validasi_panjang_input(username_baru, 4, 15):
             continue
         if cek_username_ganda(username_baru, id_admin):
-            print(f"{Fore.RED}[GAGAL!] Username sudah dipakai.")
+            print(f"{Fore.RED}{Style.BRIGHT}[GAGAL!] Username sudah dipakai!")
             continue
         break
 
@@ -51,4 +51,4 @@ def edit_akun_admin(admin_data, cek_username_ganda, user_list=None):
 
     admin_data["username"] = username_baru
     admin_data["password"] = password_baru
-    print(f"{Fore.GREEN}Akun berhasil diubah.")
+    print(f"{Fore.GREEN}{Style.BRIGHT}Akun berhasil diubah.")
