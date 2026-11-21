@@ -49,9 +49,6 @@ def ubah_wahana():
             print(f"Durasi: {data['durasi']}")
 
             print("\n=== UBAH WAHANA ===")
-            data["nama"] = input("Masukkan nama wahana baru: ")
-            data["kategori"] = input("Masukkan kategori wahana baru: ")
-            data["deskripsi"] = input("Masukkan deskripsi wahana baru: ")
             data["harga"] = input_angka_rekursif("Masukkan harga wahana baru: ")
             data["kapasitas"] = input_angka_rekursif("Masukkan kapasitas wahana baru: ")
             data["durasi"] = input_angka_rekursif("Masukkan durasi wahana baru (dalam menit): ")
