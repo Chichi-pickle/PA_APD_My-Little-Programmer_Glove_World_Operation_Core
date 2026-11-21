@@ -1,10 +1,12 @@
 from utility import baca_database, simpan_database, WAHANA_FILE, input_angka_rekursif, HISTORY_FILE
 import matplotlib.pyplot as plt
+from colorama import Fore, Style
+from InquirerPy import inquirer
 
 def tambah_wahana():
     wahana = baca_database(WAHANA_FILE)
 
-    print("\n=== TAMBAH WAHANA ===")
+    print(f"{Fore.CYAN}{Style.BRIGHT}\n=== TAMBAH WAHANA ===")
 
     nama = input("Masukkan nama wahana: ")
     kategori = input("Masukkan kategori wahana: ")
@@ -32,7 +34,7 @@ def tambah_wahana():
 
     simpan_database(WAHANA_FILE, wahana)
 
-    print("Wahana berhasil ditambahkan!")
+    print(f"{Fore.GREEN}{Style.BRIGHT}Wahana berhasil ditambahkan!")
 
 def ubah_wahana():
     wahana = baca_database(WAHANA_FILE)
@@ -48,7 +50,7 @@ def ubah_wahana():
             print(f"Kapasitas: {data['kapasitas']}")
             print(f"Durasi: {data['durasi']}")
 
-            print("\n=== UBAH WAHANA ===")
+            print(f"{Fore.CYAN}{Style.BRIGHT}\n=== UBAH WAHANA ===")
             data["harga"] = input_angka_rekursif("Masukkan harga wahana baru: ")
             data["kapasitas"] = input_angka_rekursif("Masukkan kapasitas wahana baru: ")
             data["durasi"] = input_angka_rekursif("Masukkan durasi wahana baru (dalam menit): ")
@@ -79,10 +81,17 @@ def update_status_wahana():
     for data in wahana:
         if data["id"] == id_wahana:
             print(f"Status saat ini: {data.get('status', 'Tidak tersedia')}")
-            status_baru = input("Masukkan status baru (Tersedia/Maintenance): ")
+            status_baru = inquirer.select(
+                message="Pilih status baru:",
+                choices=[
+                    "Tersedia",
+                    "Penuh",
+                    "Sedang Maintenance"
+                ]
+            ).execute()
             data["status"] = status_baru
             simpan_database(WAHANA_FILE, wahana)
-            print("Status wahana berhasil diubah!")
+            print("Status wahana berhasil diubah! Status baru:", status_baru)
             return
 
     print("Wahana tidak ditemukan!")
