@@ -11,6 +11,7 @@ if __name__ == "__main__":
         if pilihan_menu == "1. Login":
            users = utility.load_data("users.json")
            user = utility.login(users)
+           utility.clear_screen()
            if user: 
                if user.get("role") == "pengguna":
                         while True:
@@ -22,7 +23,7 @@ if __name__ == "__main__":
                               wahana_list = utility.load_data("wahana.json")
                               riwayat_list = utility.load_data("history.json")
                               
-                              pengguna.booking_wahana(user, wahana_list, riwayat_list, WAKTU_MULAI)
+                              pengguna.booking_wahana(user, wahana_list, riwayat_list, WAKTU_MULAI)     
                               
                               utility.save_data("users.json", users)
                               utility.save_data("wahana.json", wahana_list)
@@ -86,7 +87,7 @@ if __name__ == "__main__":
 
         elif pilihan_menu == "2. Register":
             utility.load_data("users.json")
-            utility.register("users.json")
+            utility.register(users)
             utility.save_data("users.json", users)
             utility.clear_screen()
         elif pilihan_menu == "3. Tentang GloveWorld":

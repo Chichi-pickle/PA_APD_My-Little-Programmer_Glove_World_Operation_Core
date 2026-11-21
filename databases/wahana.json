@@ -25,7 +25,7 @@
         "kategori": "Horror",
         "deskripsi": "Wahana ini menawarkan pengalaman menegangkan dengan efek suara dan visual yang menyeramkan. Cocok untuk pengunjung yang menyukai sensasi horor.",
         "harga": 70,
-        "kapasitas": 15,
+        "kapasitas": 14,
         "durasi": 150,
         "status": "tersedia"
     },
@@ -45,7 +45,7 @@
         "kategori": "Ekstrim",
         "deskripsi": "Wahana ini menawarkan sensasi jatuh bebas dari ketinggian yang menegangkan. Cocok untuk pengunjung yang mencari tantangan ekstrem.",
         "harga": 45,
-        "kapasitas": 9,
+        "kapasitas": 8,
         "durasi": 90,
         "status": "tersedia"
     },
@@ -55,7 +55,7 @@
         "kategori": "Santai",
         "deskripsi": "Wahana ini memberikan pengalaman klasik dengan kuda-kuda berputar yang indah. Cocok untuk keluarga dan anak-anak.",
         "harga": 60,
-        "kapasitas": 25,
+        "kapasitas": 24,
         "durasi": 120,
         "status": "tersedia"
     },
@@ -65,7 +65,7 @@
         "kategori": "Ekstrim",
         "deskripsi": "Wahana ini menawarkan sensasi meluncur di atas air dengan kecepatan tinggi. Cocok untuk pengunjung yang mencari keseruan dan tantangan.",
         "harga": 80,
-        "kapasitas": 15,
+        "kapasitas": 14,
         "durasi": 150,
         "status": "tersedia"
     },
@@ -95,7 +95,7 @@
         "kategori": "Teknologi",
         "deskripsi": "Wahana ini memberikan pengalaman imersif melalui teknologi virtual reality. Cocok untuk pengunjung yang ingin merasakan sensasi baru dan inovatif.",
         "harga": 120,
-        "kapasitas": 5,
+        "kapasitas": 4,
         "durasi": 60,
         "status": "tersedia"
     },
@@ -115,7 +115,7 @@
         "kategori": "Teknologi",
         "deskripsi": "Wahana ini memberikan pengalaman bermain laser tag dengan strategi dan kecepatan. Cocok untuk pengunjung yang menyukai tantangan dan kompetisi.",
         "harga": 80,
-        "kapasitas": 20,
+        "kapasitas": 19,
         "durasi": 120,
         "status": "tersedia"
     }

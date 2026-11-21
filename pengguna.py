@@ -1,6 +1,9 @@
 from datetime import timedelta, datetime
 from colorama import Fore, Style, init
+import inquirer
 from prettytable import PrettyTable
+from InquirerPy import inquirer
+from InquirerPy.separator import Separator
 import utility 
 
 init(autoreset = True)
@@ -8,30 +11,54 @@ FORMAT_WAKTU = "%Y-%m-%d %H:%M:%S"
 
 def booking_wahana(user, wahana_list, riwayat_list, waktu_mulai):
     print(f"\n{Fore.CYAN}{Style.BRIGHT}=== Booking Wahana ===")
-    utility.tampilkan_wahana(wahana_list)
+    print(f"Saldo Koin Anda: {Fore.YELLOW}{user.get('coin', 0)} Koin\n")
 
-    id_pilih = utility.input_angka_rekursif("Masukkan ID wahana yang dipilih: ")
-    wahana_dipilih = next((w for w in wahana_list if w.get("id") == id_pilih), None)
-
-    if (
-        wahana_dipilih is None
-        or wahana_dipilih.get("status") != "tersedia"
-        or wahana_dipilih.get("kapasitas", 0) <= 0
-    ):
-        print(f"{Fore.RED}[GAGAL!] Wahana tidak tersedia (Perbaikan / kapasitas penuh).")
+    if not wahana_list:
+        print(f"{Fore.YELLOW}Belum ada data wahana tersedia.")
         return
 
-    if user.get("coin", 0) < wahana_dipilih.get("harga", 0):
-        print(f"{Fore.RED}[GAGAL!] Koin yang anda miliki tidak cukup, silahkan top-up terlebih dahulu.")
-        return
+    header_tabel = (
+        f"  {'ID':<4} | {'NAMA WAHANA':<26} | {'KATEGORI':<10} | "
+        f"{'HARGA':<9} | {'SLOT':<4} | {'DURASI':<6} | {'STATUS'}"
+    )
+    garis_bingkai = "-" * len(header_tabel)
 
+    pilihan_wahana = [
+        Separator(garis_bingkai),
+        Separator(header_tabel),
+        Separator(garis_bingkai),
+    ]
+
+    for w in wahana_list:
+        id_str = f"#{w.get('id', '-')}"
+        nama_str = w.get('nama', '-')[:26]
+        kat_str = w.get('kategori', '-')[:10]
+        harga_str = f"{w.get('harga', 0)} Koin"
+        slot_str = f"{w.get('kapasitas', 0)}"
+        durasi_str = f"{w.get('durasi', 0)}m"
+        status_str = w.get('status', '-').upper()
+
+        label = (
+            f"{id_str:<4} | {nama_str:<26} | {kat_str:<10} | "
+            f"{harga_str:<9} | {slot_str:<4} | {durasi_str:<6} | {status_str}"
+        )
+        pilihan_wahana.append({"name": label, "value": w})
+
+    pilihan_wahana.append(Separator(garis_bingkai))
+    pilihan_wahana.append({"name": "Batal / Kembali", "value": None})
+
+    wahana_dipilih = inquirer.select(
+        message="Pilih wahana yang ingin dibooking:",
+        choices=pilihan_wahana,
+        max_height="70%",  
+    ).execute()
     user["coin"] -= wahana_dipilih["harga"]
     wahana_dipilih["kapasitas"] -= 1
-
+    
     durasi = wahana_dipilih.get("durasi", 30)
     waktu_mulai_booking = utility.waktu_simulasi(waktu_mulai)
     waktu_selesai_booking = waktu_mulai_booking + timedelta(minutes=durasi)
-
+    print(f"{Fore.GREEN}Booking anda telah berhasil, kami menunggu kedatangan anda.")
     riwayat_list.append({
         "id_user": user.get("id", user.get("username")),
         "id_wahana": wahana_dipilih.get("id"),
@@ -39,9 +66,12 @@ def booking_wahana(user, wahana_list, riwayat_list, waktu_mulai):
         "waktu_mulai": waktu_mulai_booking.strftime(FORMAT_WAKTU),
         "waktu_selesai": waktu_selesai_booking.strftime(FORMAT_WAKTU),
         "status": "aktif",
+    
+    
     })
-
-    print(f"{Fore.GREEN}Booking anda telah berhasil, kami menunggu kedatangan anda.")
+    if wahana_dipilih is None:
+        print(f"{Fore.YELLOW}Booking dibatalkan.")
+        return
 
 def top_up(user):
     print(f"\n{Fore.CYAN}{Style.BRIGHT}=== Top-Up Koin ===")
@@ -52,9 +82,14 @@ def top_up(user):
         if jumlah > 0:
             break
         print(f"{Fore.RED}[GAGAL!]Jumlah top-up tidak valid.")
-
+    if user.get("coin", 0) + jumlah > 9999:
+        print(f"{Fore.RED}[GAGAL!]Jumlah koin melebihi batas maksimal (9999).")
+        utility.clear_screen()
+        top_up(user)
+        return
     user["coin"] = user.get("coin", 0) + jumlah
     print(f"{Fore.GREEN}Top-up berhasil! Saldo koin terbaru: {user['coin']}.")
+    return
 
 def riwayat_booking(user, wahana_list, riwayat_list, waktu_mulai, perbarui_slot=None):
     print(f"\n{Fore.CYAN}{Style.BRIGHT}=== Riwayat Booking ===")

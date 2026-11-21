@@ -4,18 +4,25 @@ from colorama import init, Fore, Style
 from datetime import datetime, timedelta
 import textwrap
 
-BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "databases")
+DATABASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "databases")
+USERS_FILE = os.path.join(DATABASE_DIR, "users.json")
+WAHANA_FILE = os.path.join(DATABASE_DIR, "wahana.json")
+HISTORY_FILE = os.path.join(DATABASE_DIR, "history.json")
+
+def baca_database(file_path):
+    with open(file_path, "r", encoding="utf-8") as file:
+        return json.load(file)
 
 def load_data(nama_file):
-    file_path = os.path.join(BASE_DIR, nama_file)
+    file_path = os.path.join(DATABASE_DIR, nama_file)
     if not os.path.exists(file_path):
         return []
     with open(file_path, "r", encoding="utf-8") as file:
         return json.load(file)
 
 def save_data(nama_file, data):
-    os.makedirs(BASE_DIR, exist_ok=True)
-    file_path = os.path.join(BASE_DIR, nama_file)
+    os.makedirs(DATABASE_DIR, exist_ok=True)
+    file_path = os.path.join(DATABASE_DIR, nama_file)
     with open(file_path, "w", encoding="utf-8") as file:
         json.dump(data, file, indent=4)
 
