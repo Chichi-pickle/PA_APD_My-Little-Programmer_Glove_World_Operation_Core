@@ -18,11 +18,11 @@ def booking_wahana(user, wahana_list, riwayat_list, waktu_mulai):
         or wahana_dipilih.get("status") != "tersedia"
         or wahana_dipilih.get("kapasitas", 0) <= 0
     ):
-        print(f"{Fore.RED}[GAGAL!] Wahana tidak tersedia (Perbaikan / kapasitas penuh).")
+        print(f"{Fore.RED}{Style.BRIGHT}[GAGAL!] Wahana tidak tersedia! (Perbaikan / kapasitas penuh).")
         return
 
     if user.get("coin", 0) < wahana_dipilih.get("harga", 0):
-        print(f"{Fore.RED}[GAGAL!] Koin yang anda miliki tidak cukup, silahkan top-up terlebih dahulu.")
+        print(f"{Fore.RED}{Style.BRIGHT}[GAGAL!] Koin yang anda miliki tidak cukup, silahkan top-up terlebih dahulu.")
         return
 
     user["coin"] -= wahana_dipilih["harga"]
@@ -41,20 +41,20 @@ def booking_wahana(user, wahana_list, riwayat_list, waktu_mulai):
         "status": "aktif",
     })
 
-    print(f"{Fore.GREEN}Booking anda telah berhasil, kami menunggu kedatangan anda.")
+    print(f"{Fore.GREEN}{Style.BRIGHT}Booking anda telah berhasil, kami menunggu kedatangan anda.")
 
 def top_up(user):
     print(f"\n{Fore.CYAN}{Style.BRIGHT}=== Top-Up Koin ===")
-    print(f"Jumlah koin saat ini: {Fore.YELLOW}{user.get('coin', 0)}")
+    print(f"Jumlah koin saat ini: {Fore.YELLOW}{Style.BRIGHT}{user.get('coin', 0)}")
 
     while True:
         jumlah = utility.input_angka_rekursif("Masukkan jumlah koin yang ingin di top-up: ")
         if jumlah > 0:
             break
-        print(f"{Fore.RED}[GAGAL!]Jumlah top-up tidak valid.")
+        print(f"{Fore.RED}{Style.BRIGHT}[GAGAL!] Jumlah top-up tidak valid!")
 
     user["coin"] = user.get("coin", 0) + jumlah
-    print(f"{Fore.GREEN}Top-up berhasil! Saldo koin terbaru: {user['coin']}.")
+    print(f"{Fore.GREEN}{Style.BRIGHT}Top-up berhasil! Saldo koin terbaru: {user['coin']}.")
 
 def riwayat_booking(user, wahana_list, riwayat_list, waktu_mulai, perbarui_slot=None):
     print(f"\n{Fore.CYAN}{Style.BRIGHT}=== Riwayat Booking ===")
@@ -68,7 +68,7 @@ def riwayat_booking(user, wahana_list, riwayat_list, waktu_mulai, perbarui_slot=
             riwayat_user.append(r)
 
     if len(riwayat_user) == 0:
-        print(f"{Fore.YELLOW}Belum ada riwayat booking")
+        print(f"{Fore.YELLOW}{Style.BRIGHT}Belum ada riwayat booking!")
         return
 
     tabel = PrettyTable()
@@ -116,7 +116,7 @@ def edit_akun_pengunjung(user, cek_username_ganda):
         if not utility.validasi_panjang_input(username_baru, 4, 15):
             continue
         if cek_username_ganda(username_baru, user_aktif):
-            print(f"{Fore.RED}[GAGAL!]Username sudah dipakai.")
+            print(f"{Fore.RED}{Style.BRIGHT}[GAGAL!] Username sudah dipakai.")
             continue
         break
 
@@ -131,4 +131,4 @@ def edit_akun_pengunjung(user, cek_username_ganda):
 
     user["username"] = username_baru
     user["password"] = password_baru
-    print(f"{Fore.GREEN}Akun berhasil diubah.")
+    print(f"{Fore.GREEN}{Style.BRIGHT}Akun berhasil diubah.")

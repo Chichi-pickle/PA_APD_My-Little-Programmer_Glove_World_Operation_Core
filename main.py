@@ -4,6 +4,7 @@ import pengguna
 import admin
 from datetime import datetime
 from colorama import Fore, Style
+import crud_admin
 
 if __name__ == "__main__":
     WAKTU_MULAI = datetime.now()
@@ -62,23 +63,23 @@ if __name__ == "__main__":
                               while True:
                                    pilihan_CRUD = menu.menu_CRUD()
                                    if pilihan_CRUD == "1. Tambah Wahana":
-                                        print("Tambah Wahana")
+                                        crud_admin.tambah_wahana()
                                    elif pilihan_CRUD == "2. Edit harga/kapasitas":
-                                        print("Edit harga/kapasitas")
+                                        crud_admin.ubah_wahana()
                                    elif pilihan_CRUD == "3. Hapus Wahana":
-                                        print("Hapus Wahana")
+                                        crud_admin.hapus_wahana()
                                    elif pilihan_CRUD == "4. Update Status":
-                                        print("Update Status")
+                                        crud_admin.update_status_wahana()
                                    elif pilihan_CRUD == "5. Trafik Wahana":
-                                        print("Trafik Wahana")
+                                        crud_admin.trafik_wahana()
                                    elif pilihan_CRUD == "6. Kembali":
                                         break
                                    else:
                                         print("Pilihan tidak valid. Silakan coba lagi.")
                          elif pilihan_admin == "2. Grafik Wahana":
-                              print("Grafik Wahana")
+                              admin.grafik_wahana_favorit(riwayat_list = utility.load_data("history.json"))
                          elif pilihan_admin == "3. Edit Profile":
-                              print("Edit Profile")
+                              admin.edit_akun_admin()
                          elif pilihan_admin == "4. Logout":
                               print("Logout")
                               break

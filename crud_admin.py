@@ -1,11 +1,10 @@
-from utility import baca_database, simpan_database, WAHANA_FILE, input_angka_rekursif, HISTORY_FILE, tampilkan_wahana
+from utility import input_angka_rekursif, load_data, save_data, BASE_DIR
 import matplotlib.pyplot as plt
 from colorama import Fore, Style
 from InquirerPy import inquirer
-import menu
 
 def tambah_wahana():
-    wahana = baca_database(WAHANA_FILE)
+    wahana = load_data("wahana.json")
 
     print(f"{Fore.CYAN}{Style.BRIGHT}\n=== TAMBAH WAHANA ===")
 
@@ -33,12 +32,12 @@ def tambah_wahana():
 
     wahana.append(wahana_baru)
 
-    simpan_database(WAHANA_FILE, wahana)
+    save_data("wahana.json", wahana)
 
     print(f"{Fore.GREEN}{Style.BRIGHT}Wahana berhasil ditambahkan!")
 
 def ubah_wahana():
-    wahana = baca_database(WAHANA_FILE)
+    wahana = load_data("wahana.json")
     id_wahana = input_angka_rekursif("Masukkan ID wahana yang ingin diubah: ")
 
     for data in wahana:
@@ -56,27 +55,27 @@ def ubah_wahana():
             data["kapasitas"] = input_angka_rekursif("Masukkan kapasitas wahana baru: ")
             data["durasi"] = input_angka_rekursif("Masukkan durasi wahana baru (dalam menit): ")
 
-            simpan_database(WAHANA_FILE, wahana)
-            print("Wahana berhasil diubah!")
+            save_data("wahana.json", wahana)
+            print(f"{Fore.GREEN}{Style.BRIGHT}Wahana berhasil diubah!")
             return
 
-    print("Wahana tidak ditemukan!")
+    print(f"{Fore.RED}{Style.BRIGHT}Wahana tidak ditemukan!")
 
 def hapus_wahana():
-    wahana = baca_database(WAHANA_FILE)
+    wahana = load_data("wahana.json")
     id_wahana = input_angka_rekursif("Masukkan ID wahana yang ingin dihapus: ")
 
     for data in wahana:
         if data["id"] == id_wahana:
             wahana.remove(data)
-            simpan_database(WAHANA_FILE, wahana)
-            print("Wahana berhasil dihapus!")
+            save_data("wahana.json", wahana)
+            print(f"{Fore.GREEN}{Style.BRIGHT}Wahana berhasil dihapus!")
             return
 
-    print("Wahana tidak ditemukan!")
+    print(f"{Fore.RED}{Style.BRIGHT}Wahana tidak ditemukan!")
 
 def update_status_wahana():
-    wahana = baca_database(WAHANA_FILE)
+    wahana = load_data("wahana.json")
     id_wahana = input_angka_rekursif("Masukkan ID wahana yang ingin diubah statusnya: ")
 
     for data in wahana:
@@ -91,15 +90,15 @@ def update_status_wahana():
                 ]
             ).execute()
             data["status"] = status_baru
-            simpan_database(WAHANA_FILE, wahana)
-            print("Status wahana berhasil diubah! Status baru:", status_baru)
+            save_data("wahana.json", wahana)
+            print(f"{Fore.GREEN}{Style.BRIGHT}Status wahana berhasil diubah! Status baru: {status_baru}")
             return
 
-    print("Wahana tidak ditemukan!")
+    print(f"{Fore.RED}{Style.BRIGHT}Wahana tidak ditemukan!")
 
 def trafik_wahana():
-    history = baca_database(HISTORY_FILE)
-    wahana = baca_database(WAHANA_FILE)
+    history = load_data("history.json")
+    wahana = load_data("wahana.json")
 
     jumlah_booking = {}
 
@@ -122,7 +121,7 @@ def trafik_wahana():
             total_booking.append(jumlah_booking[id_wahana])
 
     if not nama_wahana:
-        print("Tidak ada data booking yang tersedia.")
+        print(f"{Fore.RED}{Style.BRIGHT}Tidak ada data booking yang tersedia.")
         return
 
     plt.figure(figsize=(10, 5))

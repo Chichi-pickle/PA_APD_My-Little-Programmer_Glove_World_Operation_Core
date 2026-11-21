@@ -19,5 +19,12 @@
         "password": "chika123",
         "role": "pengguna",
         "coin": 0
+    },
+    {
+        "id": 4,
+        "username": "tungtung",
+        "password": "tungtung123",
+        "role": "pengguna",
+        "coin": 0
     }
 ]
