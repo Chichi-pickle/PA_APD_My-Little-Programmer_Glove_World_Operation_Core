@@ -12,5 +12,12 @@
         "password": "Spongebob_DaBob190",
         "role": "pengguna",
         "coin": 10000
+    },
+    {
+        "id": 3,
+        "username": "chika",
+        "password": "chika123",
+        "role": "pengguna",
+        "coin": 0
     }
 ]

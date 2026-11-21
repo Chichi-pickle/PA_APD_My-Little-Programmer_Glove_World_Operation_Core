@@ -1,7 +1,8 @@
-from utility import baca_database, simpan_database, WAHANA_FILE, input_angka_rekursif, HISTORY_FILE
+from utility import baca_database, simpan_database, WAHANA_FILE, input_angka_rekursif, HISTORY_FILE, tampilkan_wahana
 import matplotlib.pyplot as plt
 from colorama import Fore, Style
 from InquirerPy import inquirer
+import menu
 
 def tambah_wahana():
     wahana = baca_database(WAHANA_FILE)
