@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "username": "admin",
+        "username": "adminbsr",
         "password": "1231",
         "role": "admin",
         "coin": 1000000

@@ -52,7 +52,7 @@ def menu_CRUD():
             "2. Edit harga/kapasitas",
             "3. Hapus Wahana",
             "4. Update Status",
-            "5. Trafik Wahana",
+            "5. Tampilkan Wahana",
             "6. Kembali"
         ],
     ).execute()

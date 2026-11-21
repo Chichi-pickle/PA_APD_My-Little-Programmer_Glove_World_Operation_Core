@@ -2,6 +2,7 @@ import menu
 import utility
 import pengguna
 import admin
+import crud_admin
 from datetime import datetime
 
 if __name__ == "__main__":
@@ -62,29 +63,44 @@ if __name__ == "__main__":
                               while True:
                                    pilihan_CRUD = menu.menu_CRUD()
                                    if pilihan_CRUD == "1. Tambah Wahana":
-                                        print("Tambah Wahana")
+                                        utility.tampilkan_wahana(wahana_list = utility.load_data("wahana.json"))
+                                        crud_admin.tambah_wahana()
+                                        utility.clear_screen()
                                    elif pilihan_CRUD == "2. Edit harga/kapasitas":
-                                        print("Edit harga/kapasitas")
+                                        utility.tampilkan_wahana(wahana_list = utility.load_data("wahana.json"))
+                                        crud_admin.ubah_wahana()
+                                        utility.clear_screen()
                                    elif pilihan_CRUD == "3. Hapus Wahana":
-                                        print("Hapus Wahana")
+                                        crud_admin.hapus_wahana()
+                                        utility.clear_screen()
                                    elif pilihan_CRUD == "4. Update Status":
-                                        print("Update Status")
-                                   elif pilihan_CRUD == "5. Trafik Wahana":
-                                        print("Trafik Wahana")
+                                        utility.tampilkan_wahana(wahana_list = utility.load_data("wahana.json"))
+                                        crud_admin.update_status_wahana()
+                                        utility.clear_screen()
+                                   elif pilihan_CRUD == "5. Tampilkan Wahana":
+                                        utility.tampilkan_wahana(wahana_list = utility.load_data("wahana.json"))
+                                        utility.clear_screen()
                                    elif pilihan_CRUD == "6. Kembali":
                                         break
                                    else:
                                         print("Pilihan tidak valid. Silakan coba lagi.")
-                         elif pilihan_admin == "2. Grafik Wahana":
-                              print("Grafik Wahana")
-                         elif pilihan_admin == "3. Edit Profile":
-                              print("Edit Profile")
-                         elif pilihan_admin == "4. Logout":
-                              print("Logout")
-                              break
-                         else:
-                              print("Pilihan tidak valid. Silakan coba lagi.") 
 
+                         elif pilihan_admin == "2. Grafik Wahana":
+                              admin.grafik_wahana_favorit(riwayat_list = utility.load_data("history.json"))
+                              utility.clear_screen()
+                         elif pilihan_admin == "3. Edit Profile":
+                              admin.edit_akun_admin(
+                                  user,
+                                        cek_username_ganda=lambda username_baru, user_aktif: any(
+                                             u.get("username") == username_baru and u.get("id", u.get("username")) != user_aktif
+                                             for u in users
+                                        ),
+                                        )
+                              utility.save_data("users.json", users)
+                              utility.clear_screen()
+                         elif pilihan_admin == "4. Logout":
+                              break
+                         
         elif pilihan_menu == "2. Register":
           users = utility.load_data("users.json")
           utility.register(users)
@@ -96,7 +112,6 @@ if __name__ == "__main__":
             utility.tampilkan_wahana(wahana_list = utility.load_data("wahana.json"))
             utility.clear_screen()
         elif pilihan_menu == "4. Exit":
-            print("Exiting...")
+            print("Terimakasih telah menggunakan layanan kami, sampai jumpa lagi!!")
             break
-        else:
-            print("Pilihan tidak valid. Silakan coba lagi.")
+        

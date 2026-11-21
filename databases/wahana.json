@@ -7,7 +7,7 @@
         "harga": 100,
         "kapasitas": 20,
         "durasi": 120,
-        "status": "tersedia"
+        "status": "Sedang Maintenance"
     },
     {
         "id": 2,
@@ -117,6 +117,16 @@
         "harga": 80,
         "kapasitas": 19,
         "durasi": 120,
+        "status": "tersedia"
+    },
+    {
+        "id": 13,
+        "nama": "ESTAFET BATANG PISANG",
+        "kategori": "Olahraga",
+        "deskripsi": "Lomba lari sambil bawa batang pisang",
+        "harga": 15,
+        "kapasitas": 8,
+        "durasi": 15,
         "status": "tersedia"
     }
 ]

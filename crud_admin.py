@@ -1,4 +1,4 @@
-from utility import baca_database, simpan_database, WAHANA_FILE, input_angka_rekursif, HISTORY_FILE
+from utility import baca_database, save_data, WAHANA_FILE, input_angka_rekursif, HISTORY_FILE
 import matplotlib.pyplot as plt
 from colorama import Fore, Style
 from InquirerPy import inquirer
@@ -27,12 +27,13 @@ def tambah_wahana():
         "deskripsi": deskripsi,
         "harga": harga,
         "kapasitas": kapasitas,
-        "durasi": durasi
+        "durasi": durasi,
+        "status": "tersedia"
     }
 
     wahana.append(wahana_baru)
 
-    simpan_database(WAHANA_FILE, wahana)
+    save_data(WAHANA_FILE, wahana)
 
     print(f"{Fore.GREEN}{Style.BRIGHT}Wahana berhasil ditambahkan!")
 
@@ -55,7 +56,7 @@ def ubah_wahana():
             data["kapasitas"] = input_angka_rekursif("Masukkan kapasitas wahana baru: ")
             data["durasi"] = input_angka_rekursif("Masukkan durasi wahana baru (dalam menit): ")
 
-            simpan_database(WAHANA_FILE, wahana)
+            save_data(WAHANA_FILE, wahana)
             print("Wahana berhasil diubah!")
             return
 
@@ -68,7 +69,7 @@ def hapus_wahana():
     for data in wahana:
         if data["id"] == id_wahana:
             wahana.remove(data)
-            simpan_database(WAHANA_FILE, wahana)
+            save_data(WAHANA_FILE, wahana)
             print("Wahana berhasil dihapus!")
             return
 
@@ -90,7 +91,7 @@ def update_status_wahana():
                 ]
             ).execute()
             data["status"] = status_baru
-            simpan_database(WAHANA_FILE, wahana)
+            save_data(WAHANA_FILE, wahana)
             print("Status wahana berhasil diubah! Status baru:", status_baru)
             return
 
