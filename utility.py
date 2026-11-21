@@ -123,3 +123,8 @@ def tampilkan_wahana(wahana_list):
             print(f"{Fore.CYAN}| {Fore.LIGHTBLACK_EX}{baris:<{lebar}} {Fore.CYAN}|")
 
         print(f"{Fore.CYAN}{garis}\n")
+
+def tentang_gloveworld():
+    print(f"\n{Fore.CYAN}{Style.BRIGHT}=== Tentang GloveWorld ===")
+    print("\nSelamat datang di GloveWorld! \n\nGloveWorld adalah taman hiburan yang menawarkan berbagai wahana menarik dan pengalaman seru bagi pengunjung dari segala usia. \nDengan berbagai pilihan wahana, pengunjung dapat menikmati keseruan dan kegembiraan yang tak terlupakan. \nKami berkomitmen untuk memberikan pengalaman yang aman, menyenangkan, dan memuaskan bagi semua pengunjung kami. \nSelalu ingat, jika ingin bersenang-senang, datanglah ke GloveWorld dan rasakan sensasi yang luar biasa! \n\nGloveWorld, Beyond Fun, Beyond Adventure!")
+    tampilkan_wahana(wahana_list = load_data("wahana.json"))

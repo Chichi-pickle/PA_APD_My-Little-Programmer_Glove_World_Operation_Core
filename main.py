@@ -3,6 +3,7 @@ import utility
 import pengguna
 import admin
 from datetime import datetime
+from colorama import Fore, Style
 
 if __name__ == "__main__":
     WAKTU_MULAI = datetime.now()
@@ -90,7 +91,8 @@ if __name__ == "__main__":
             utility.save_data("users.json", users)
             utility.clear_screen()
         elif pilihan_menu == "3. Tentang GloveWorld":
-            print("Tentang GloveWorld")
+            utility.tentang_gloveworld()
+            utility.clear_screen()
         elif pilihan_menu == "4. Exit":
             print("Exiting...")
             break
