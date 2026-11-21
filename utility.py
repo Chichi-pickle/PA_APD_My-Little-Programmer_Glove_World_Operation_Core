@@ -2,8 +2,21 @@ import os
 from colorama import init, Fore, Style
 from datetime import datetime, timedelta
 from InquirerPy import inquirer
+import json
 
+DATABASE_DIR = os.path.join(os.path.dirname(__file__), "database")
 
+USERS_FILE = os.path.join(DATABASE_DIR, "users.json")
+WAHANA_FILE = os.path.join(DATABASE_DIR, "wahana.json")
+HISTORY_FILE = os.path.join(DATABASE_DIR, "history.json")
+
+def baca_database(file_path):
+    with open(file_path, "r", encoding="utf-8") as file:
+        return json.load(file)
+
+def simpan_database(file_path, data):
+    with open(file_path, "w", encoding="utf-8") as file:
+        json.dump(data, file, indent=4)
 
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -23,7 +36,7 @@ def waktu_simulasi(waktu_mulai):
 def menu_utama():
     print(f"{Fore.CYAN}{Style.BRIGHT}===== Menu Utama =====")
     pilihan = inquirer.select(
-            message="Pilih opsi 1~4:",
+            message="Pilih opsi 1 - 4:",
             choices=[
                 "1. Login",
                 "2. Register",
@@ -37,7 +50,7 @@ def menu_utama():
 def menu_pengunjung():
     print(f"{Fore.CYAN}{Style.BRIGHT}===== Menu Pengunjung =====")
     pilihan = inquirer.select(
-            message="Pilih opsi 1~6:",
+            message="Pilih opsi 1 - 6:",
             choices=[
                 "1. Lihat Wahana",
                 "2. Booking Wahana",
@@ -51,7 +64,7 @@ def menu_pengunjung():
 def menu_admin():
     print(f"{Fore.CYAN}{Style.BRIGHT}===== Menu Admin =====")
     pilihan = inquirer.select(
-            message="Pilih opsi 1~4:",
+            message="Pilih opsi 1 - 4:",
             choices=[
                 "1. Manajemen Wahana",
                 "2. Grafik Wahana",
@@ -63,7 +76,7 @@ def menu_admin():
 def menu_CRUD():
     print(f"{Fore.CYAN}{Style.BRIGHT}===== Manajemen Wahana =====")
     pilihan = inquirer.select(
-        message="Pilih opsi 1~6:",
+        message="Pilih opsi 1 - 6:",
         choices=[
             "1. Tambah Wahana",
             "2. Edit harga/kapasitas",

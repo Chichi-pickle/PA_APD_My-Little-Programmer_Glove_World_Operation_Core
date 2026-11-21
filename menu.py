@@ -1,6 +1,6 @@
 import utility
 import crud_admin
-
+from InquirerPy import inquirer
 
 def jeda():
     input("\nTekan Enter untuk melanjutkan...")
@@ -32,7 +32,6 @@ def menu_admin():
         else:
             print("Pilihan tidak tersedia!")
             jeda()
-
 
 def menu_pengguna():
     while True:
