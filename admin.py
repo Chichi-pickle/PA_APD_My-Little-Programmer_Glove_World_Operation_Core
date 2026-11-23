@@ -99,6 +99,7 @@ def edit_akun_admin(admin_data, cek_username_ganda):
             continue
         if cek_username_ganda(username_baru, id_admin):
             print(f"{Fore.RED}{Style.BRIGHT}[GAGAL!] Username sudah dipakai!")
+            print(f"{Fore.RED}[GAGAL!] Username sudah dipakai.")
             continue
         break
 

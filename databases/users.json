@@ -9,9 +9,9 @@
     {
         "id": 2,
         "username": "qwerty",
-        "password": "123",
+        "password": "1234567",
         "role": "pengguna",
-        "coin": 3
+        "coin": 263
     },
     {
         "id": 3,

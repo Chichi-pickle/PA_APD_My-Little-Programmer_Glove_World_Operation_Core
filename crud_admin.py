@@ -22,7 +22,6 @@ def _buat_id_tersedia(wahana_list):
         id_baru += 1
     return id_baru
 
-
 # [PERUBAHAN] Menambahkan helper '_input_angka_positif'.
 # [MEKANISME] Membungkus 'input_angka_rekursif' dengan perulangan validasi batas minimal agar harga, kapasitas, dan durasi tidak bernilai negatif atau 0 (untuk kapasitas & durasi).
 # [NOTULENSI] Notulensi Konsul 2 (21 Nov 2026) - poin "Isi wahana enggak boleh kosong" & validasi data wahana.

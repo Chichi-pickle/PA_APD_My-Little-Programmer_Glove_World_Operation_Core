@@ -79,5 +79,14 @@
         "tanggal_booking": "2026-11-23",
         "tanggal_main": "2026-11-26",
         "status": "aktif"
+    },
+    {
+        "id_user": 2,
+        "id_wahana": 10,
+        "wahana": "Virtual Reality Experience",
+        "jumlah_tiket": 2,
+        "tanggal_booking": "2026-11-23",
+        "tanggal_main": "2026-11-24",
+        "status": "aktif"
     }
 ]
