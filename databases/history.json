@@ -3,64 +3,81 @@
         "id_user": 2,
         "id_wahana": 2,
         "wahana": "Ferris Wheel",
-        "waktu_mulai": "2026-11-20 04:04:22",
-        "waktu_selesai": "2026-11-20 07:04:22",
-        "status": "aktif"
+        "jumlah_tiket": 1,
+        "tanggal_booking": "2026-11-20",
+        "tanggal_main": "2026-11-20",
+        "status": "tidak aktif"
     },
     {
         "id_user": 2,
         "id_wahana": 5,
         "wahana": "Drop Tower",
-        "waktu_mulai": "2026-11-20 04:22:34",
-        "waktu_selesai": "2026-11-20 05:52:34",
-        "status": "aktif"
+        "jumlah_tiket": 1,
+        "tanggal_booking": "2026-11-20",
+        "tanggal_main": "2026-11-20",
+        "status": "tidak aktif"
     },
     {
         "id_user": 2,
         "id_wahana": 12,
         "wahana": "Laser Tag Arena",
-        "waktu_mulai": "2026-11-21 03:53:03",
-        "waktu_selesai": "2026-11-21 05:53:03",
-        "status": "aktif"
+        "jumlah_tiket": 1,
+        "tanggal_booking": "2026-11-21",
+        "tanggal_main": "2026-11-21",
+        "status": "tidak aktif"
     },
     {
         "id_user": 2,
         "id_wahana": 5,
         "wahana": "Drop Tower",
-        "waktu_mulai": "2026-11-21 05:38:16",
-        "waktu_selesai": "2026-11-21 07:08:16",
-        "status": "aktif"
+        "jumlah_tiket": 1,
+        "tanggal_booking": "2026-11-21",
+        "tanggal_main": "2026-11-21",
+        "status": "tidak aktif"
     },
     {
         "id_user": 2,
         "id_wahana": 3,
         "wahana": "Haunted House",
-        "waktu_mulai": "2026-11-21 02:14:32",
-        "waktu_selesai": "2026-11-21 04:44:32",
-        "status": "aktif"
+        "jumlah_tiket": 1,
+        "tanggal_booking": "2026-11-21",
+        "tanggal_main": "2026-11-21",
+        "status": "tidak aktif"
     },
     {
         "id_user": 2,
         "id_wahana": 10,
         "wahana": "Virtual Reality Experience",
-        "waktu_mulai": "2026-11-21 02:50:08",
-        "waktu_selesai": "2026-11-21 03:50:08",
-        "status": "aktif"
+        "jumlah_tiket": 1,
+        "tanggal_booking": "2026-11-21",
+        "tanggal_main": "2026-11-21",
+        "status": "tidak aktif"
     },
     {
         "id_user": 2,
         "id_wahana": 6,
         "wahana": "Carousel",
-        "waktu_mulai": "2026-11-21 01:54:31",
-        "waktu_selesai": "2026-11-21 03:54:31",
-        "status": "aktif"
+        "jumlah_tiket": 1,
+        "tanggal_booking": "2026-11-21",
+        "tanggal_main": "2026-11-21",
+        "status": "tidak aktif"
     },
     {
         "id_user": 2,
         "id_wahana": 7,
         "wahana": "Water Slide",
-        "waktu_mulai": "2026-11-21 03:31:42",
-        "waktu_selesai": "2026-11-21 06:01:42",
+        "jumlah_tiket": 1,
+        "tanggal_booking": "2026-11-21",
+        "tanggal_main": "2026-11-21",
+        "status": "tidak aktif"
+    },
+    {
+        "id_user": 4,
+        "id_wahana": 13,
+        "wahana": "ESTAFET BATANG PISANG",
+        "jumlah_tiket": 4,
+        "tanggal_booking": "2026-11-23",
+        "tanggal_main": "2026-11-26",
         "status": "aktif"
     }
 ]

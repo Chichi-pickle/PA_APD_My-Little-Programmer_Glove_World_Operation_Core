@@ -19,5 +19,12 @@
         "password": "134567",
         "role": "pengguna",
         "coin": 0
+    },
+    {
+        "id": 4,
+        "username": "suki",
+        "password": "sungutlele",
+        "role": "pengguna",
+        "coin": 1152
     }
 ]
