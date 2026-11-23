@@ -1,16 +1,30 @@
 [
     {
         "id": 1,
-        "username": "AdminGacor1408_",
-        "password": "AdminGacor1408_",
+        "username": "adminbsr",
+        "password": "1231",
         "role": "admin",
         "coin": 1000000
     },
     {
         "id": 2,
-        "username": "Spongebob_DaBob190",
-        "password": "Spongebob_DaBob190",
+        "username": "qwerty",
+        "password": "1234567",
         "role": "pengguna",
-        "coin": 10000
+        "coin": 263
+    },
+    {
+        "id": 3,
+        "username": "ahmad",
+        "password": "134567",
+        "role": "pengguna",
+        "coin": 0
+    },
+    {
+        "id": 4,
+        "username": "suki",
+        "password": "sungutlele",
+        "role": "pengguna",
+        "coin": 1152
     }
 ]

@@ -1,54 +1,59 @@
-import utility
-import crud_admin
+from colorama import init, Fore, Style
+from InquirerPy import inquirer
 
-
-def jeda():
-    input("\nTekan Enter untuk melanjutkan...")
-
-
-def menu_admin():
-    while True:
-        utility.clear_screen()
-        print("===== Menu Admin =====")
-        print("1. Tambah Adventure")
-        print("2. Lihat Adventure")
-        print("3. Update Adventure")
-        print("4. Hapus Adventure")
-        print("5. Logout")
-        pilihan = input("Pilih dari 1-5: ").strip()
-
-        if pilihan == "1":
-            crud_admin.tambah_adventure()
-        elif pilihan == "2":
-            crud_admin.lihat_adventure()
-        elif pilihan == "3":
-            crud_admin.update_adventure()
-        elif pilihan == "4":
-            crud_admin.hapus_adventure()
-        elif pilihan == "5":
-            print("Logout berhasil!")
-            jeda()
-            return
-        else:
-            print("Pilihan tidak tersedia!")
-            jeda()
-
+def menu_utama():
+    print(f"{Fore.CYAN}{Style.BRIGHT}===== Menu Utama =====")
+    pilihan = inquirer.select(
+            message="Pilih opsi 1~4:",
+            choices=[
+                "1. Login",
+                "2. Register",
+                "3. Tentang GloveWorld",
+                "4. Exit",
+            ],
+        ).execute()
+    return pilihan
+       
 
 def menu_pengguna():
-    while True:
-        utility.clear_screen()
-        print("===== Menu Pengguna =====")
-        print("1. Adventure Board")
-        print("2. Logout")
-        pilihan = input("Pilih 1 atau 2: ").strip()
+    print(f"{Fore.CYAN}{Style.BRIGHT}===== Menu Pengguna =====")
+    pilihan = inquirer.select(
+            message="Pilih opsi 1~6:",
+            choices=[
+                "1. Lihat Wahana",
+                "2. Booking Wahana",
+                "3. Riwayat Booking",
+                "4. Edit Profile",
+                "5. Top-up Koin", 
+                "6. Logout"
+            ],
+        ).execute()   
+    return pilihan
 
-        if pilihan == "1":
-            print("\n=== ADVENTURE BOARD ===")
-            crud_admin.lihat_adventure()
-        elif pilihan == "2":
-            print("Logout berhasil!")
-            jeda()
-            return
-        else:
-            print("Pilihan tidak tersedia!")
-            jeda()
+def menu_admin():
+    print(f"{Fore.CYAN}{Style.BRIGHT}===== Menu Admin =====")
+    pilihan = inquirer.select(
+            message="Pilih opsi 1~4:",
+            choices=[
+                "1. Manajemen Wahana",
+                "2. Grafik Wahana",
+                "3. Edit Profile",
+                "4. Logout",
+            ],
+        ).execute()   
+    return pilihan
+    
+def menu_CRUD():
+    print(f"{Fore.CYAN}{Style.BRIGHT}===== Manajemen Wahana =====")
+    pilihan = inquirer.select(
+        message="Pilih opsi 1~6:",
+        choices=[
+            "1. Tambah Wahana",
+            "2. Edit harga/kapasitas",
+            "3. Hapus Wahana",
+            "4. Update Status",
+            "5. Tampilkan Wahana",
+            "6. Kembali"
+        ],
+    ).execute()
+    return pilihan
