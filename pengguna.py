@@ -82,7 +82,6 @@ def booking_wahana(user, wahana_list, riwayat_list, waktu_mulai=None):
         print(f"{Fore.YELLOW}Belum ada data wahana tersedia.")
         return False
 
-    # PILIH TANGGAL MAIN
     opsi_tanggal = [{"name": label, "value": tgl} for tgl, label in _daftar_7_hari_ke_depan()]
     opsi_tanggal.append(Separator("-" * 35))
     opsi_tanggal.append({"name": "Kembali", "value": None})
@@ -97,7 +96,6 @@ def booking_wahana(user, wahana_list, riwayat_list, waktu_mulai=None):
         print(f"{Fore.YELLOW}Kembali ke menu pengunjung.")
         return False
 
-    # PILIH WAHANA
     header_tabel = (
         f"  {'ID':<4} | {'NAMA WAHANA':<26} | {'KATEGORI':<10} | "
         f"{'HARGA':<9} | {'KAPASITAS':<18} | {'STATUS'}"
@@ -150,7 +148,6 @@ def booking_wahana(user, wahana_list, riwayat_list, waktu_mulai=None):
         utility.clear_screen()
         return booking_wahana(user, wahana_list, riwayat_list, waktu_mulai)
 
-    # INPUT JUMLAH TIKET YANG DI BOOKING
     while True:
         jumlah_orang = utility.input_angka_rekursif(
             f"Masukkan jumlah orang (1 - {sisa_slot} kapasitas tersedia): "
@@ -163,7 +160,6 @@ def booking_wahana(user, wahana_list, riwayat_list, waktu_mulai=None):
             continue
         break
 
-    # VALIDASI SALDO KOIN PENGGUNA
     harga_satuan = int(wahana_dipilih.get("harga", 0))
     total_harga = harga_satuan * jumlah_orang
     saldo_saat_ini = int(user.get("coin", 0))
@@ -176,7 +172,6 @@ def booking_wahana(user, wahana_list, riwayat_list, waktu_mulai=None):
         )
         return False
 
-    # PROSES BOOKING
     user["coin"] = saldo_saat_ini - total_harga
     tanggal_booking_str = datetime.now().date().strftime(FORMAT_TANGGAL)
     tanggal_main_str = tanggal_main.strftime(FORMAT_TANGGAL)
@@ -233,7 +228,6 @@ def riwayat_booking(user, wahana_list=None, riwayat_list=None, waktu_mulai=None,
         print(f"{Fore.YELLOW}Belum ada riwayat booking.")
         return
 
-    # FILTER HISTORY BERDASAR TANGGAL
     opsi_filter = [
         {"name": "Semua Riwayat", "value": "SEMUA"},
         Separator("-" * 35),
