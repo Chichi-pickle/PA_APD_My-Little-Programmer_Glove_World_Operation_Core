@@ -1,1 +1,92 @@
-[]
+[
+    {
+        "id_user": 2,
+        "id_wahana": 2,
+        "wahana": "Ferris Wheel",
+        "jumlah_tiket": 1,
+        "tanggal_booking": "2026-11-20",
+        "tanggal_main": "2026-11-20",
+        "status": "tidak aktif"
+    },
+    {
+        "id_user": 2,
+        "id_wahana": 5,
+        "wahana": "Drop Tower",
+        "jumlah_tiket": 1,
+        "tanggal_booking": "2026-11-20",
+        "tanggal_main": "2026-11-20",
+        "status": "tidak aktif"
+    },
+    {
+        "id_user": 2,
+        "id_wahana": 12,
+        "wahana": "Laser Tag Arena",
+        "jumlah_tiket": 1,
+        "tanggal_booking": "2026-11-21",
+        "tanggal_main": "2026-11-21",
+        "status": "tidak aktif"
+    },
+    {
+        "id_user": 2,
+        "id_wahana": 5,
+        "wahana": "Drop Tower",
+        "jumlah_tiket": 1,
+        "tanggal_booking": "2026-11-21",
+        "tanggal_main": "2026-11-21",
+        "status": "tidak aktif"
+    },
+    {
+        "id_user": 2,
+        "id_wahana": 3,
+        "wahana": "Haunted House",
+        "jumlah_tiket": 1,
+        "tanggal_booking": "2026-11-21",
+        "tanggal_main": "2026-11-21",
+        "status": "tidak aktif"
+    },
+    {
+        "id_user": 2,
+        "id_wahana": 10,
+        "wahana": "Virtual Reality Experience",
+        "jumlah_tiket": 1,
+        "tanggal_booking": "2026-11-21",
+        "tanggal_main": "2026-11-21",
+        "status": "tidak aktif"
+    },
+    {
+        "id_user": 2,
+        "id_wahana": 6,
+        "wahana": "Carousel",
+        "jumlah_tiket": 1,
+        "tanggal_booking": "2026-11-21",
+        "tanggal_main": "2026-11-21",
+        "status": "tidak aktif"
+    },
+    {
+        "id_user": 2,
+        "id_wahana": 7,
+        "wahana": "Water Slide",
+        "jumlah_tiket": 1,
+        "tanggal_booking": "2026-11-21",
+        "tanggal_main": "2026-11-21",
+        "status": "tidak aktif"
+    },
+    {
+        "id_user": 4,
+        "id_wahana": 13,
+        "wahana": "ESTAFET BATANG PISANG",
+        "jumlah_tiket": 4,
+        "tanggal_booking": "2026-11-23",
+        "tanggal_main": "2026-11-26",
+        "status": "aktif"
+    },
+    {
+        "id_user": 2,
+        "id_wahana": 10,
+        "wahana": "Virtual Reality Experience",
+        "jumlah_tiket": 2,
+        "tanggal_booking": "2026-11-23",
+        "tanggal_main": "2026-11-24",
+        "status": "aktif"
+    }
+]
