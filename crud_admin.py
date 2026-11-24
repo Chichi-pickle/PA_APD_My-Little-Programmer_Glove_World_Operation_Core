@@ -1,9 +1,6 @@
 import matplotlib.pyplot as plt
 from colorama import Fore, Style, init
 from InquirerPy import inquirer
-# [PERUBAHAN] Mengganti 'baca_database' menjadi 'load_data' dan menambahkan 'input_teks_wajib'.
-# [MEKANISME] 'baca_database' dihapus dari utility.py karena fungsinya sama dengan 'load_data', sedangkan 'input_teks_wajib' memvalidasi agar teks tidak kosong/spasi saja.
-# [NOTULENSI] Notulensi Konsul 2 (21 Nov 2026) - poin "Isi wahana enggak boleh kosong" & "Spasi enggak kehitung karakter".
 from utility import load_data, save_data, input_angka_rekursif, input_teks_wajib
 
 init(autoreset=True)
@@ -12,9 +9,6 @@ WAHANA_FILE = "wahana.json"
 HISTORY_FILE = "history.json"
 
 
-# [PERUBAHAN] Menambahkan helper '_buat_id_tersedia' untuk pengisian ID wahana.
-# [MEKANISME] Melakukan iterasi angka mulai dari 1 hingga menemukan ID pertama yang belum dipakai di wahana_list, lalu data diurutkan berdasarkan ID saat disimpan agar ID lama tidak bergeser.
-# [NOTULENSI] Notulensi Konsul 2 (21 Nov 2026) - poin "Pengisian wahana: saling mengisi slot yang kosong".
 def _buat_id_tersedia(wahana_list):
     id_terpakai = {w.get("id") for w in wahana_list if isinstance(w.get("id"), int)}
     id_baru = 1
@@ -22,9 +16,6 @@ def _buat_id_tersedia(wahana_list):
         id_baru += 1
     return id_baru
 
-# [PERUBAHAN] Menambahkan helper '_input_angka_positif'.
-# [MEKANISME] Membungkus 'input_angka_rekursif' dengan perulangan validasi batas minimal agar harga, kapasitas, dan durasi tidak bernilai negatif atau 0 (untuk kapasitas & durasi).
-# [NOTULENSI] Notulensi Konsul 2 (21 Nov 2026) - poin "Isi wahana enggak boleh kosong" & validasi data wahana.
 def _input_angka_positif(prompt, minimal=1):
     while True:
         nilai = input_angka_rekursif(prompt)
@@ -35,16 +26,10 @@ def _input_angka_positif(prompt, minimal=1):
 
 
 def tambah_wahana():
-    # [PERUBAHAN] Menggunakan load_data(WAHANA_FILE) alih-alih baca_database(WAHANA_FILE).
-    # [MEKANISME] Membaca file JSON dari folder databases/ menggunakan helper standar load_data.
-    # [NOTULENSI] Konsistensi struktur penyimpanan database di folder databases/.
     wahana = load_data(WAHANA_FILE)
 
     print(f"\n{Fore.CYAN}{Style.BRIGHT}=== TAMBAH WAHANA ===")
 
-    # [PERUBAHAN] Input nama, kategori, dan deskripsi memakai input_teks_wajib().
-    # [MEKANISME] Input di-.strip() dan ditolak jika kosong ("") atau hanya spasi sebelum diterima.
-    # [NOTULENSI] Notulensi Konsul 2 (21 Nov 2026) - poin "Isi wahana enggak boleh kosong" & "Spasi enggak kehitung karakter".
     nama = input_teks_wajib("Masukkan nama wahana: ")
     kategori = input_teks_wajib("Masukkan kategori wahana: ")
     deskripsi = input_teks_wajib("Masukkan deskripsi wahana: ")
@@ -52,9 +37,6 @@ def tambah_wahana():
     kapasitas = _input_angka_positif("Masukkan kapasitas wahana: ", minimal=1)
     durasi = _input_angka_positif("Masukkan durasi wahana (dalam menit): ", minimal=1)
 
-    # [PERUBAHAN] Mengganti rumus max(id) + 1 menjadi _buat_id_tersedia(wahana) + sort berdasarkan id.
-    # [MEKANISME] Jika misalnya ID 13 dihapus dari 14 wahana, wahana baru mendapat ID 13 lalu list diurutkan ulang berdasarkan ID.
-    # [NOTULENSI] Notulensi Konsul 2 (21 Nov 2026) - poin "Pengisian wahana: saling mengisi slot yang kosong".
     id_baru = _buat_id_tersedia(wahana)
 
     wahana_baru = {
@@ -93,9 +75,6 @@ def ubah_wahana():
             print(f"Kapasitas saat ini : {data.get('kapasitas', 0)}")
             print(f"Durasi saat ini    : {data.get('durasi', 0)} menit\n")
 
-            # [PERUBAHAN] Setiap field boleh dikosongkan (tekan Enter) untuk mempertahankan nilai lama, dan input spasi saja ditolak/diabaikan.
-            # [MEKANISME] Jika input == "", nilai lama tetap dipakai; jika input.strip() == "", admin diberi peringatan/diabaikan agar spasi tidak masuk sebagai data valid.
-            # [NOTULENSI] Notulensi Konsul 2 (21 Nov 2026) - poin "Ubah wahana: alur ubah wahana caranya disamain aja kayak di edit profil" & "Spasi enggak kehitung karakter".
             nama_baru = input("Nama baru (kosongkan jika tidak ingin diubah): ")
             if nama_baru != "":
                 if nama_baru.strip() == "":
@@ -205,9 +184,6 @@ def update_status_wahana():
     for data in wahana:
         if data.get("id") == id_wahana:
             print(f"Status saat ini: {data.get('status', 'tidak tersedia')}")
-            # [PERUBAHAN] Menyeragamkan pilihan status menjadi huruf kecil dan menambah opsi "Batal".
-            # [MEKANISME] Menggunakan inquirer.select agar konsisten dengan pengecekan status di modul pengguna ('tersedia') serta memberi jalan keluar jika batal.
-            # [NOTULENSI] Notulensi Konsul 2 (21 Nov 2026) - konsistensi alur & validasi status wahana.
             status_baru = inquirer.select(
                 message="Pilih status baru:",
                 choices=[
@@ -252,9 +228,6 @@ def trafik_wahana():
         print(f"{Fore.YELLOW}Tidak ada data booking aktif yang tersedia.")
         return
 
-    # [PERUBAHAN] Mengurutkan data dari terbesar ke terkecil dan membatasi maksimal 10 data dengan slicing [:10].
-    # [MEKANISME] Melakukan sorted(..., reverse=True)[:10] sebelum membuat bar chart matplotlib agar grafik tidak terlalu padat jika jumlah wahana banyak.
-    # [NOTULENSI] Notulensi Konsul 2 (21 Nov 2026) - poin "Batas grafik wahana: buat grafik wahana dibatasin aja misalnya maksimal 10 tertinggi".
     rekap_top10 = sorted(rekap, key=lambda x: x[1], reverse=True)[:10]
     nama_wahana = [item[0] for item in rekap_top10]
     total_booking = [item[1] for item in rekap_top10]

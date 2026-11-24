@@ -11,9 +11,6 @@ FORMAT_WAKTU = "%Y-%m-%d %H:%M:%S"
 def grafik_wahana_favorit(riwayat_list):
     print(f"\n{Fore.CYAN}{Style.BRIGHT}=== Grafik Frekuensi Wahana Favorit (3 Bulan Terakhir) ===")
 
-    # [PERUBAHAN] Menggunakan batas tanggal (date) 90 hari ke belakang dan membaca field 'tanggal_booking' (dengan fallback 'waktu_mulai').
-    # [MEKANISME] Mem-parsing tanggal berformat YYYY-MM-DD (atau YYYY-MM-DD HH:MM:SS) lalu menjumlahkan jumlah_tiket untuk transaksi dalam 3 bulan terakhir.
-    # [NOTULENSI] Notulensi Konsul 2 (21 Nov 2026) - poin struktur tanggal di database history & grafik wahana.
     batas_tanggal = (datetime.now() - timedelta(days=90)).date()
     frekuensi = {}
 
@@ -44,9 +41,6 @@ def grafik_wahana_favorit(riwayat_list):
         print(f"{Fore.YELLOW}{Style.BRIGHT}Belum ada data riwayat booking dalam 3 bulan terakhir.")
         return
 
-    # [PERUBAHAN] Membatasi hasil grafik maksimal 10 wahana tertinggi menggunakan [:10].
-    # [MEKANISME] Mengurutkan dictionary frekuensi secara descending berdasarkan total booking lalu mengambil 10 teratas untuk sumbu X (wahana) dan sumbu Y (total booking).
-    # [NOTULENSI] Notulensi Konsul 2 (21 Nov 2026) - poin "Batas grafik wahana: buat grafik wahana dibatasin aja misalnya maksimal 10 tertinggi".
     data_urut = sorted(frekuensi.items(), key=lambda x: x[1], reverse=True)[:10]
     daftar_wahana = [x[0] for x in data_urut]
     total_booking = [x[1] for x in data_urut]

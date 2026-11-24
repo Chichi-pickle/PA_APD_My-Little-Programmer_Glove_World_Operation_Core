@@ -92,6 +92,62 @@ def register(users_list):
     print(f"{Fore.GREEN}Registrasi berhasil! Akun '{username}' siap digunakan untuk login.")
     return True
 
+def load_data(nama_file):
+    file_path = os.path.join(DATABASE_DIR, nama_file)
+    if not os.path.exists(file_path):
+        return []
+    with open(file_path, "r", encoding="utf-8") as file:
+        return json.load(file)
+
+def save_data(nama_file, data):
+    os.makedirs(DATABASE_DIR, exist_ok=True)
+    file_path = os.path.join(DATABASE_DIR, nama_file)
+    with open(file_path, "w", encoding="utf-8") as file:
+        json.dump(data, file, indent=4)
+
+def login(users_list):
+    print(f"\n{Fore.CYAN}{Style.BRIGHT}=== Login GloveWorld ===")
+    username = input("Username: ")
+    password = input("Password: ")
+
+    for user in users_list:
+        if user.get("username") == username and user.get("password") == password:
+            print(f"{Fore.GREEN}Login berhasil! Selamat datang, {username} ({user.get('role')}).")
+            return user
+
+    print(f"{Fore.RED}[GAGAL!] Username atau password salah.")
+    return None
+
+def register(users_list):
+    print(f"\n{Fore.CYAN}{Style.BRIGHT}=== Register Akun Baru GloveWorld ===")
+
+    while True:
+        username = input("Masukkan username baru: ").strip()
+        if not validasi_panjang_input(username, 4, 15):
+            continue
+        if any(u.get("username") == username for u in users_list):
+            print(f"{Fore.RED}[GAGAL!] Username '{username}' sudah digunakan. Pilih yang lain.")
+            continue
+        break
+
+    while True:
+        password = input("Masukkan password baru: ").strip()
+        if not validasi_panjang_input(password, 6, 20):
+            continue
+        break
+
+    id_baru = max((u.get("id", 0) for u in users_list), default=0) + 1
+
+    user_baru = {
+        "id": id_baru,
+        "username": username,
+        "password": password,
+        "role": "pengguna",
+        "coin": 0
+    }
+
+    users_list.append(user_baru)
+    print(f"{Fore.GREEN}Registrasi berhasil! Akun '{username}' siap digunakan untuk login.")
 
 def clear_screen():
     input(f"\n{Fore.YELLOW}Tekan Enter untuk melanjutkan...")
