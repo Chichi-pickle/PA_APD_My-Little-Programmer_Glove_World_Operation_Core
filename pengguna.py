@@ -147,7 +147,8 @@ def booking_wahana(user, wahana_list, riwayat_list, waktu_mulai=None):
             f"{Fore.RED}[GAGAL!] Wahana tidak tersedia pada tanggal tersebut "
             f"(Status: {wahana_dipilih.get('status', '-')} | Sisa kapasitas: {sisa_slot})."
         )
-        return False
+        utility.clear_screen()
+        return booking_wahana(user, wahana_list, riwayat_list, waktu_mulai)
 
     # INPUT JUMLAH TIKET YANG DI BOOKING
     while True:
