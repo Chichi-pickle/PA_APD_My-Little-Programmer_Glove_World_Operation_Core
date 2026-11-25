@@ -70,23 +70,5 @@
         "tanggal_booking": "2026-11-21",
         "tanggal_main": "2026-11-21",
         "status": "tidak aktif"
-    },
-    {
-        "id_user": 4,
-        "id_wahana": 13,
-        "wahana": "ESTAFET BATANG PISANG",
-        "jumlah_tiket": 4,
-        "tanggal_booking": "2026-11-23",
-        "tanggal_main": "2026-11-26",
-        "status": "aktif"
-    },
-    {
-        "id_user": 4,
-        "id_wahana": 13,
-        "wahana": "ESTAFET BATANG PISANG",
-        "jumlah_tiket": 5,
-        "tanggal_booking": "2026-11-23",
-        "tanggal_main": "2026-11-24",
-        "status": "aktif"
     }
 ]

@@ -121,11 +121,11 @@
     },
     {
         "id": 13,
-        "nama": "ESTAFET BATANG PISANG",
-        "kategori": "Olahraga",
-        "deskripsi": "Lomba lari sambil bawa batang pisang",
-        "harga": 15,
-        "kapasitas": 8,
+        "nama": "Estafet Batang Pisang",
+        "kategori": "Santai",
+        "deskripsi": "Lomba lari sambil bawa batang pisang buat di oper ke teman.",
+        "harga": 50,
+        "kapasitas": 9,
         "durasi": 15,
         "status": "tersedia"
     }
