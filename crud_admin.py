@@ -206,37 +206,3 @@ def update_status_wahana():
     print(f"{Fore.RED}Wahana dengan ID #{id_wahana} tidak ditemukan!")
 
 
-def trafik_wahana():
-    history = load_data(HISTORY_FILE)
-    wahana = load_data(WAHANA_FILE)
-
-    jumlah_booking = {}
-    for data in history:
-        if str(data.get("status", "")).lower() == "aktif":
-            id_wahana = data.get("id_wahana")
-            tiket = int(data.get("jumlah_tiket", 1))
-            if id_wahana is not None:
-                jumlah_booking[id_wahana] = jumlah_booking.get(id_wahana, 0) + tiket
-
-    rekap = []
-    for data in wahana:
-        id_wahana = data.get("id")
-        if id_wahana in jumlah_booking:
-            rekap.append((data.get("nama", f"ID {id_wahana}"), jumlah_booking[id_wahana]))
-
-    if not rekap:
-        print(f"{Fore.YELLOW}Tidak ada data booking aktif yang tersedia.")
-        return
-
-    rekap_top10 = sorted(rekap, key=lambda x: x[1], reverse=True)[:10]
-    nama_wahana = [item[0] for item in rekap_top10]
-    total_booking = [item[1] for item in rekap_top10]
-
-    plt.figure(figsize=(10, 5))
-    plt.bar(nama_wahana, total_booking, color="skyblue", edgecolor="black")
-    plt.title("Trafik Wahana Aktif (Maks. 10 Tertinggi)")
-    plt.xlabel("Nama Wahana")
-    plt.ylabel("Jumlah Booking")
-    plt.xticks(rotation=30, ha="right")
-    plt.tight_layout()
-    plt.show()
