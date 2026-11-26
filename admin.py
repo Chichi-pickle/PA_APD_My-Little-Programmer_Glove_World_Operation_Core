@@ -6,7 +6,6 @@ from prettytable import PrettyTable
 from utility import validasi_panjang_input
 
 init(autoreset=True)
-FORMAT_WAKTU = "%Y-%m-%d %H:%M:%S"
 
 def grafik_wahana_favorit(riwayat_list):
     print(f"\n{Fore.CYAN}{Style.BRIGHT}=== Grafik Frekuensi Wahana Favorit (3 Bulan Terakhir) ===")
@@ -85,7 +84,7 @@ def edit_akun_admin(admin_data, cek_username_ganda):
     id_admin = admin_data.get("id", username_lama)
 
     while True:
-        username_baru = input("Username baru (kosongkan jika tidak ingin diubah): ")
+        username_baru = input("Username baru (kosongkan jika tidak ingin diubah): ").strip()
         if username_baru == "":
             username_baru = username_lama
             break
@@ -93,12 +92,11 @@ def edit_akun_admin(admin_data, cek_username_ganda):
             continue
         if cek_username_ganda(username_baru, id_admin):
             print(f"{Fore.RED}{Style.BRIGHT}[GAGAL!] Username sudah dipakai!")
-            print(f"{Fore.RED}[GAGAL!] Username sudah dipakai.")
             continue
         break
 
     while True:
-        password_baru = input("Password baru (kosongkan jika tidak ingin diubah): ")
+        password_baru = input("Password baru (kosongkan jika tidak ingin diubah): ").strip()
         if password_baru == "":
             password_baru = password_lama
             break
