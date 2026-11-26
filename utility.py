@@ -137,12 +137,6 @@ def input_angka_rekursif(prompt):
         return input_angka_rekursif(prompt)
 
 
-def waktu_simulasi(waktu_mulai):
-    selisih_nyata = datetime.now() - waktu_mulai
-    selisih_simulasi = timedelta(seconds=selisih_nyata.total_seconds() * 60)
-    return waktu_mulai + selisih_simulasi
-
-
 def validasi_panjang_input(input_str, min_teks=4, max_teks=20):
     teks_bersih = input_str.strip()
     if len(teks_bersih) == 0:

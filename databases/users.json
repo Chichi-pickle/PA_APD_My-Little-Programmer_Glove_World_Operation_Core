@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "username": "adminbsr",
+        "username": "admingde",
         "password": "1231",
         "role": "admin",
         "coin": 1000000
@@ -26,5 +26,12 @@
         "password": "1122332",
         "role": "pengguna",
         "coin": 939
+    },
+    {
+        "id": 5,
+        "username": "asep",
+        "password": "23232323",
+        "role": "pengguna",
+        "coin": 1161
     }
 ]
