@@ -111,12 +111,12 @@
     },
     {
         "id": 12,
-        "nama": "Laser Tag Arena",
-        "kategori": "Teknologi",
-        "deskripsi": "Wahana ini memberikan pengalaman bermain laser tag dengan strategi dan kecepatan. Cocok untuk pengunjung yang menyukai tantangan dan kompetisi.",
-        "harga": 80,
-        "kapasitas": 19,
-        "durasi": 120,
+        "nama": "Tembak Laser",
+        "kategori": "Ekstrim",
+        "deskripsi": "pergi ke medan lapangan neon dan rasakan pertempuran ala sci fi yang memukau.",
+        "harga": 12,
+        "kapasitas": 13,
+        "durasi": 30,
         "status": "tersedia"
     },
     {
@@ -127,6 +127,16 @@
         "harga": 50,
         "kapasitas": 9,
         "durasi": 15,
+        "status": "tersedia"
+    },
+    {
+        "id": 14,
+        "nama": "Melempar Bola",
+        "kategori": "Ekstrim",
+        "deskripsi": "Masuk ke medan pertempuran dan bersiap mengeliminasi musuh yang banyak dengan melempar bola.",
+        "harga": 15,
+        "kapasitas": 15,
+        "durasi": 30,
         "status": "tersedia"
     }
 ]

@@ -86,7 +86,7 @@ if __name__ == "__main__":
                                     crud_admin.tambah_wahana()
                                     utility.clear_screen()
 
-                                elif pilihan_CRUD == "2. Edit harga/kapasitas":
+                                elif pilihan_CRUD == "2. Edit Wahana":
                                     utility.tampilkan_wahana(wahana_list=utility.load_data("wahana.json"))
                                     crud_admin.ubah_wahana()
                                     utility.clear_screen()
