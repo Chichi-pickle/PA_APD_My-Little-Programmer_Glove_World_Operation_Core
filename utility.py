@@ -1,7 +1,6 @@
 import os
 import json
 import textwrap
-from datetime import datetime, timedelta
 from colorama import init, Fore, Style
 from InquirerPy import inquirer
 
@@ -91,33 +90,6 @@ def register(users_list):
     users_list.append(user_baru)
     print(f"{Fore.GREEN}Registrasi berhasil! Akun '{username}' siap digunakan untuk login.")
     return True
-
-def load_data(nama_file):
-    file_path = os.path.join(DATABASE_DIR, nama_file)
-    if not os.path.exists(file_path):
-        return []
-    with open(file_path, "r", encoding="utf-8") as file:
-        return json.load(file)
-
-def save_data(nama_file, data):
-    os.makedirs(DATABASE_DIR, exist_ok=True)
-    file_path = os.path.join(DATABASE_DIR, nama_file)
-    with open(file_path, "w", encoding="utf-8") as file:
-        json.dump(data, file, indent=4)
-
-def login(users_list):
-    print(f"\n{Fore.CYAN}{Style.BRIGHT}=== Login GloveWorld ===")
-    username = input("Username: ")
-    password = input("Password: ")
-
-    for user in users_list:
-        if user.get("username") == username and user.get("password") == password:
-            print(f"{Fore.GREEN}Login berhasil! Selamat datang, {username} ({user.get('role')}).")
-            return user
-
-    print(f"{Fore.RED}[GAGAL!] Username atau password salah.")
-    return None
-
 
 def clear_screen():
     input(f"\n{Fore.YELLOW}Tekan Enter untuk melanjutkan...")

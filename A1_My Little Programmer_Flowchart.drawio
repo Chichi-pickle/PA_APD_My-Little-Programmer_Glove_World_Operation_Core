@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mxfile host="app.diagrams.net" agent="Claude" pages="7">
   <diagram id="home-pg" name="Home">
-    <mxGraphModel dx="1775" dy="1019" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2120" pageHeight="1400" math="0" shadow="0">
+    <mxGraphModel dx="1090" dy="654" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2120" pageHeight="1400" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -41,7 +41,7 @@
         <mxCell id="home-13" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#fff2cc;strokeColor=#d6b656;" value="role == &quot;pengguna&quot;?" vertex="1">
           <mxGeometry height="100" width="240" x="255" y="978" as="geometry" />
         </mxCell>
-        <mxCell id="home-14" parent="1" style="shape=offPageConnector;size=0.25;fontSize=11;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#eeeeee;strokeColor=#666666;" value="Pengunjung" vertex="1">
+        <mxCell id="home-14" parent="1" style="shape=offPageConnector;size=0.25;fontSize=11;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#eeeeee;strokeColor=#666666;" value="Pengguna" vertex="1">
           <mxGeometry height="56" width="96" x="555" y="1000" as="geometry" />
         </mxCell>
         <mxCell id="home-15" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#fff2cc;strokeColor=#d6b656;" value="role == &quot;admin&quot;?" vertex="1">
@@ -86,7 +86,7 @@
         <mxCell id="home-27" parent="1" style="shape=offPageConnector;size=0.25;fontSize=11;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#eeeeee;strokeColor=#666666;" value="Admin pulang" vertex="1">
           <mxGeometry height="56" width="96" x="667" y="202" as="geometry" />
         </mxCell>
-        <mxCell id="home-28" parent="1" style="shape=offPageConnector;size=0.25;fontSize=11;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#eeeeee;strokeColor=#666666;" value="Pengunjung pulang" vertex="1">
+        <mxCell id="home-28" parent="1" style="shape=offPageConnector;size=0.25;fontSize=11;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#eeeeee;strokeColor=#666666;" value="Pengguna pulang" vertex="1">
           <mxGeometry height="56" width="96" x="667" y="302" as="geometry" />
         </mxCell>
         <mxCell id="home-e0" edge="1" parent="1" source="home-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#333333;strokeWidth=1.5;fontSize=11;fontStyle=1;labelBackgroundColor=none;fontColor=#c62828;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="home-3" value="">
@@ -447,11 +447,11 @@
     </mxGraphModel>
   </diagram>
   <diagram id="pengunju-pg" name="Pengguna">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="2700" pageHeight="996" math="0" shadow="0">
+    <mxGraphModel dx="2211" dy="1326" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2700" pageHeight="996" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="pengunju-2" parent="1" style="shape=offPageConnector;size=0.25;fontSize=11;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#eeeeee;strokeColor=#666666;" value="Pengunjung" vertex="1">
+        <mxCell id="pengunju-2" parent="1" style="shape=offPageConnector;size=0.25;fontSize=11;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#eeeeee;strokeColor=#666666;" value="Pengguna" vertex="1">
           <mxGeometry height="56" width="96" x="327" y="88" as="geometry" />
         </mxCell>
         <mxCell id="pengunju-3" parent="1" style="shape=process;size=0.07;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#ffe6cc;strokeColor=#d79b00;" value="pilihan_pengguna = menu_pengguna()" vertex="1">
@@ -502,7 +502,7 @@
         <mxCell id="pengunju-19" parent="1" style="shape=process;size=0.07;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#ffe6cc;strokeColor=#d79b00;" value="clear_screen()" vertex="1">
           <mxGeometry height="48" width="230" x="940" y="772" as="geometry" />
         </mxCell>
-        <mxCell id="pengunju-20" parent="1" style="shape=process;size=0.07;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#ffe6cc;strokeColor=#d79b00;" value="edit_akun_pengunjung(user, cek_username_ganda)" vertex="1">
+        <mxCell id="pengunju-20" parent="1" style="shape=process;size=0.07;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#ffe6cc;strokeColor=#d79b00;" value="edit_akun_pengguna(user, cek_username_ganda)" vertex="1">
           <mxGeometry height="54" width="280" x="1255" y="488" as="geometry" />
         </mxCell>
         <mxCell id="pengunju-21" parent="1" style="shape=process;size=0.07;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#ffe6cc;strokeColor=#d79b00;" value="save_data(&quot;users.json&quot;, users)" vertex="1">
@@ -526,7 +526,7 @@
         <mxCell id="pengunju-27" parent="1" style="shape=process;size=0.07;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#ffe6cc;strokeColor=#d79b00;" value="clear_screen()" vertex="1">
           <mxGeometry height="48" width="230" x="2320" y="449" as="geometry" />
         </mxCell>
-        <mxCell id="pengunju-28" parent="1" style="shape=offPageConnector;size=0.25;fontSize=11;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#eeeeee;strokeColor=#666666;" value="Pengunjung pulang" vertex="1">
+        <mxCell id="pengunju-28" parent="1" style="shape=offPageConnector;size=0.25;fontSize=11;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#eeeeee;strokeColor=#666666;" value="Pengguna pulang" vertex="1">
           <mxGeometry height="56" width="96" x="2387" y="539" as="geometry" />
         </mxCell>
         <mxCell id="pengunju-e0" edge="1" parent="1" source="pengunju-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#333333;strokeWidth=1.5;fontSize=11;fontStyle=1;labelBackgroundColor=none;fontColor=#c62828;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pengunju-3" value="">
@@ -697,7 +697,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fu-admin-pg" name="Fungsi Utama - Admin">
-    <mxGraphModel dx="1469" dy="843" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2230" pageHeight="2042" math="0" shadow="0">
+    <mxGraphModel grid="0" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="2230" pageHeight="2042" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1077,7 +1077,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fu-pengunjung-pg" name="Fungsi Utama - Pengguna">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="3910" pageHeight="5723" math="0" shadow="0">
+    <mxGraphModel dx="815" dy="488" grid="0" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3910" pageHeight="5723" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1094,7 +1094,7 @@
           <mxGeometry height="1960" width="1160" x="150" y="3350" as="geometry" />
         </mxCell>
         <mxCell id="fungsiut-f4" parent="1" style="rounded=1;arcSize=1.5;fillColor=none;dashed=1;dashPattern=6 4;strokeColor=#9e9e9e;strokeWidth=1.2;html=1;" value="" vertex="1">
-          <mxGeometry height="850" width="870" x="1640" y="3380" as="geometry" />
+          <mxGeometry height="882" width="870" x="1640" y="3348" as="geometry" />
         </mxCell>
         <mxCell id="fungsiut-f5" parent="1" style="rounded=1;arcSize=1.5;fillColor=none;dashed=1;dashPattern=6 4;strokeColor=#9e9e9e;strokeWidth=1.2;html=1;" value="" vertex="1">
           <mxGeometry height="822" width="830" x="2900" y="3350" as="geometry" />
@@ -1182,10 +1182,10 @@
         <mxCell id="fungsiut-24" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=22;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#b0e3e6;strokeColor=#0e8088;" value="Belum ada data wahana tersedia." vertex="1">
           <mxGeometry height="52" width="300" x="315" y="522" as="geometry" />
         </mxCell>
-        <mxCell id="fungsiut-25" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=22;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#b0e3e6;strokeColor=#0e8088;" value="Kembali ke menu pengunjung." vertex="1">
+        <mxCell id="fungsiut-25" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=22;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#b0e3e6;strokeColor=#0e8088;" value="Kembali ke menu pengguna." vertex="1">
           <mxGeometry height="52" width="300" x="315" y="876" as="geometry" />
         </mxCell>
-        <mxCell id="fungsiut-26" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=22;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#b0e3e6;strokeColor=#0e8088;" value="Kembali ke menu pengunjung." vertex="1">
+        <mxCell id="fungsiut-26" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=22;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#b0e3e6;strokeColor=#0e8088;" value="Kembali ke menu pengguna." vertex="1">
           <mxGeometry height="52" width="300" x="315" y="1268" as="geometry" />
         </mxCell>
         <mxCell id="fungsiut-27" parent="1" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#e6f0fa;strokeColor=#6c8ebf;" value="Kembalikan False" vertex="1">
@@ -1299,16 +1299,16 @@
         <mxCell id="fungsiut-62" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=22;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#b0e3e6;strokeColor=#0e8088;" value="Belum ada riwayat booking." vertex="1">
           <mxGeometry height="52" width="300" x="2670" y="805" as="geometry" />
         </mxCell>
-        <mxCell id="fungsiut-63" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=22;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#b0e3e6;strokeColor=#0e8088;" value="Kembali ke menu pengunjung." vertex="1">
+        <mxCell id="fungsiut-63" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=22;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#b0e3e6;strokeColor=#0e8088;" value="Kembali ke menu pengguna." vertex="1">
           <mxGeometry height="52" width="300" x="2670" y="1175" as="geometry" />
         </mxCell>
         <mxCell id="fungsiut-64" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=22;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#b0e3e6;strokeColor=#0e8088;" value="Tidak ada riwayat booking untuk pilihan tersebut." vertex="1">
           <mxGeometry height="54" width="300" x="2670" y="1580" as="geometry" />
         </mxCell>
-        <mxCell id="fungsiut-65" parent="1" style="shape=mxgraph.flowchart.terminator;fontStyle=1;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#d5e8d4;strokeColor=#82b366;" value="edit_akun_pengunjung(user, cek_username_ganda)" vertex="1">
+        <mxCell id="fungsiut-65" parent="1" style="shape=mxgraph.flowchart.terminator;fontStyle=1;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#d5e8d4;strokeColor=#82b366;" value="edit_akun_pengguna(user, cek_username_ganda)" vertex="1">
           <mxGeometry height="40" width="344" x="518" y="3380" as="geometry" />
         </mxCell>
-        <mxCell id="fungsiut-66" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=22;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#b0e3e6;strokeColor=#0e8088;" value="=== Edit Akun Pengunjung ===" vertex="1">
+        <mxCell id="fungsiut-66" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=22;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#b0e3e6;strokeColor=#0e8088;" value="=== Edit Akun Pengguna ===" vertex="1">
           <mxGeometry height="52" width="290" x="545" y="3460" as="geometry" />
         </mxCell>
         <mxCell id="fungsiut-67" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="username_lama = user[&quot;username&quot;]&lt;br&gt;password_lama = user[&quot;password&quot;]&lt;br&gt;user_aktif = user.get(&quot;id&quot;, username_lama)" vertex="1">
@@ -3240,7 +3240,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="fungsipe-pg" name="Fungsi Pembantu">
-    <mxGraphModel grid="0" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="4340" pageHeight="5318" math="0" shadow="0">
+    <mxGraphModel dx="4074" dy="2442" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4340" pageHeight="5318" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3274,14 +3274,11 @@
         <mxCell id="fungsipe-f13" parent="1" style="rounded=1;arcSize=1.5;fillColor=none;dashed=1;dashPattern=6 4;strokeColor=#9e9e9e;strokeWidth=1.2;html=1;" value="" vertex="1">
           <mxGeometry height="290" width="320" x="1740" y="3880" as="geometry" />
         </mxCell>
-        <mxCell id="fungsipe-f14" parent="1" style="rounded=1;arcSize=1.5;fillColor=none;dashed=1;dashPattern=6 4;strokeColor=#9e9e9e;strokeWidth=1.2;html=1;" value="" vertex="1">
-          <mxGeometry height="478" width="320" x="2150" y="3880" as="geometry" />
-        </mxCell>
         <mxCell id="fungsipe-f15" parent="1" style="rounded=1;arcSize=1.5;fillColor=none;dashed=1;dashPattern=6 4;strokeColor=#9e9e9e;strokeWidth=1.2;html=1;" value="" vertex="1">
-          <mxGeometry height="902" width="780" x="2560" y="3880" as="geometry" />
+          <mxGeometry height="902" width="780" x="2237" y="3880" as="geometry" />
         </mxCell>
         <mxCell id="fungsipe-f16" parent="1" style="rounded=1;arcSize=1.5;fillColor=none;dashed=1;dashPattern=6 4;strokeColor=#9e9e9e;strokeWidth=1.2;html=1;" value="" vertex="1">
-          <mxGeometry height="798" width="850" x="3430" y="3880" as="geometry" />
+          <mxGeometry height="798" width="850" x="3107" y="3880" as="geometry" />
         </mxCell>
         <mxCell id="fungsipe-f17" parent="1" style="rounded=1;arcSize=1.5;fillColor=none;dashed=1;dashPattern=6 4;strokeColor=#9e9e9e;strokeWidth=1.2;html=1;" value="" vertex="1">
           <mxGeometry height="1136" width="435" x="3460" y="160" as="geometry" />
@@ -3541,71 +3538,56 @@
         <mxCell id="fungsipe-104" parent="1" style="shape=mxgraph.flowchart.terminator;fontStyle=1;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#f8cecc;strokeColor=#b85450;" value="END" vertex="1">
           <mxGeometry height="40" width="120" x="1840" y="4100" as="geometry" />
         </mxCell>
-        <mxCell id="fungsipe-105" parent="1" style="shape=mxgraph.flowchart.terminator;fontStyle=1;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#d5e8d4;strokeColor=#82b366;" value="waktu_simulasi(waktu_mulai)" vertex="1">
-          <mxGeometry height="40" width="223" x="2199" y="3910" as="geometry" />
-        </mxCell>
-        <mxCell id="fungsipe-106" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="selisih_nyata = datetime.now() − waktu_mulai" vertex="1">
-          <mxGeometry height="54" width="260" x="2180" y="3990" as="geometry" />
-        </mxCell>
-        <mxCell id="fungsipe-107" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="selisih_simulasi = selisih_nyata (detik) x 60&lt;br&gt;(1 detik nyata = 1 menit simulasi)" vertex="1">
-          <mxGeometry height="70" width="260" x="2180" y="4084" as="geometry" />
-        </mxCell>
-        <mxCell id="fungsipe-108" parent="1" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#e6f0fa;strokeColor=#6c8ebf;" value="Kembalikan waktu_mulai + selisih_simulasi" vertex="1">
-          <mxGeometry height="54" width="260" x="2180" y="4194" as="geometry" />
-        </mxCell>
-        <mxCell id="fungsipe-109" parent="1" style="shape=mxgraph.flowchart.terminator;fontStyle=1;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#f8cecc;strokeColor=#b85450;" value="END" vertex="1">
-          <mxGeometry height="40" width="120" x="2250" y="4288" as="geometry" />
-        </mxCell>
         <mxCell id="fungsipe-110" parent="1" style="shape=mxgraph.flowchart.terminator;fontStyle=1;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#d5e8d4;strokeColor=#82b366;" value="_cetak_card_wahana(w, tampilkan_deskripsi=True)" vertex="1">
-          <mxGeometry height="50" width="340" x="2650" y="3910" as="geometry" />
+          <mxGeometry height="50" width="340" x="2327" y="3910" as="geometry" />
         </mxCell>
         <mxCell id="fungsipe-111" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Ambil data wahana: id, nama (huruf besar), kategori,&lt;br&gt;harga, kapasitas, durasi, status, deskripsi" vertex="1">
-          <mxGeometry height="70" width="320" x="2660" y="4000" as="geometry" />
+          <mxGeometry height="70" width="320" x="2337" y="4000" as="geometry" />
         </mxCell>
         <mxCell id="fungsipe-112" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#fff2cc;strokeColor=#d6b656;" value="status == &quot;tersedia&quot;?" vertex="1">
-          <mxGeometry height="100" width="240" x="2700" y="4110" as="geometry" />
+          <mxGeometry height="100" width="240" x="2377" y="4110" as="geometry" />
         </mxCell>
         <mxCell id="fungsipe-113" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="warna_status = hijau" vertex="1">
-          <mxGeometry height="46" width="260" x="2690" y="4266" as="geometry" />
+          <mxGeometry height="46" width="260" x="2367" y="4266" as="geometry" />
         </mxCell>
         <mxCell id="fungsipe-114" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=22;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#b0e3e6;strokeColor=#0e8088;" value="Cetak kartu: [ID] NAMA (kategori)&lt;br&gt;Harga | Kapasitas | Durasi | Status" vertex="1">
-          <mxGeometry height="70" width="290" x="2675" y="4352" as="geometry" />
+          <mxGeometry height="70" width="290" x="2352" y="4352" as="geometry" />
         </mxCell>
         <mxCell id="fungsipe-115" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#fff2cc;strokeColor=#d6b656;" value="tampilkan_deskripsi?" vertex="1">
-          <mxGeometry height="100" width="240" x="2700" y="4462" as="geometry" />
+          <mxGeometry height="100" width="240" x="2377" y="4462" as="geometry" />
         </mxCell>
         <mxCell id="fungsipe-116" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=22;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#b0e3e6;strokeColor=#0e8088;" value="Cetak deskripsi wahana&lt;br&gt;(dibungkus per 56 karakter)" vertex="1">
-          <mxGeometry height="54" width="290" x="2675" y="4618" as="geometry" />
+          <mxGeometry height="54" width="290" x="2352" y="4618" as="geometry" />
         </mxCell>
         <mxCell id="fungsipe-117" parent="1" style="shape=mxgraph.flowchart.terminator;fontStyle=1;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#f8cecc;strokeColor=#b85450;" value="END" vertex="1">
-          <mxGeometry height="40" width="120" x="2760" y="4712" as="geometry" />
+          <mxGeometry height="40" width="120" x="2437" y="4712" as="geometry" />
         </mxCell>
         <mxCell id="fungsipe-118" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="warna_status = merah" vertex="1">
-          <mxGeometry height="46" width="220" x="3090" y="4137" as="geometry" />
+          <mxGeometry height="46" width="220" x="2767" y="4137" as="geometry" />
         </mxCell>
         <mxCell id="fungsipe-119" parent="1" style="shape=mxgraph.flowchart.terminator;fontStyle=1;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#d5e8d4;strokeColor=#82b366;" value="tampilkan_wahana(wahana_list, batas=None,&lt;br&gt;tampilkan_deskripsi=True)" vertex="1">
-          <mxGeometry height="50" width="340" x="3520" y="3910" as="geometry" />
+          <mxGeometry height="50" width="340" x="3197" y="3910" as="geometry" />
         </mxCell>
         <mxCell id="fungsipe-120" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=22;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#b0e3e6;strokeColor=#0e8088;" value="=== DAFTAR WAHANA GLOVEWORLD ===" vertex="1">
-          <mxGeometry height="52" width="290" x="3545" y="4000" as="geometry" />
+          <mxGeometry height="52" width="290" x="3222" y="4000" as="geometry" />
         </mxCell>
         <mxCell id="fungsipe-121" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#fff2cc;strokeColor=#d6b656;" value="wahana_list kosong?" vertex="1">
-          <mxGeometry height="100" width="240" x="3570" y="4092" as="geometry" />
+          <mxGeometry height="100" width="240" x="3247" y="4092" as="geometry" />
         </mxCell>
         <mxCell id="fungsipe-122" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="data_tampil = wahana_list[:batas] jika batas ada,&lt;br&gt;selain itu wahana_list" vertex="1">
-          <mxGeometry height="70" width="320" x="3530" y="4248" as="geometry" />
+          <mxGeometry height="70" width="320" x="3207" y="4248" as="geometry" />
         </mxCell>
         <mxCell id="fungsipe-123" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#fff2cc;strokeColor=#d6b656;" value="Masih ada wahana w&lt;br&gt;di data_tampil?" vertex="1">
-          <mxGeometry height="100" width="280" x="3550" y="4358" as="geometry" />
+          <mxGeometry height="100" width="280" x="3227" y="4358" as="geometry" />
         </mxCell>
         <mxCell id="fungsipe-124" parent="1" style="shape=process;size=0.07;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#ffe6cc;strokeColor=#d79b00;" value="_cetak_card_wahana(w, tampilkan_deskripsi)" vertex="1">
-          <mxGeometry height="54" width="280" x="3550" y="4514" as="geometry" />
+          <mxGeometry height="54" width="280" x="3227" y="4514" as="geometry" />
         </mxCell>
         <mxCell id="fungsipe-125" parent="1" style="shape=mxgraph.flowchart.terminator;fontStyle=1;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#f8cecc;strokeColor=#b85450;" value="END" vertex="1">
-          <mxGeometry height="40" width="120" x="3630" y="4608" as="geometry" />
+          <mxGeometry height="40" width="120" x="3307" y="4608" as="geometry" />
         </mxCell>
         <mxCell id="fungsipe-126" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=22;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#b0e3e6;strokeColor=#0e8088;" value="Belum ada data wahana tersedia." vertex="1">
-          <mxGeometry height="52" width="280" x="3930" y="4116" as="geometry" />
+          <mxGeometry height="52" width="280" x="3607" y="4116" as="geometry" />
         </mxCell>
         <mxCell id="fungsipe-127" parent="1" style="shape=mxgraph.flowchart.terminator;fontStyle=1;whiteSpace=wrap;html=1;strokeWidth=1.5;fontSize=12;fontColor=#1a1a1a;fillColor=#d5e8d4;strokeColor=#82b366;" value="tentang_gloveworld(wahana_list=None)" vertex="1">
           <mxGeometry height="40" width="280" x="3495" y="190" as="geometry" />
@@ -4028,18 +4010,6 @@
         <mxCell id="fungsipe-e105" edge="1" parent="1" source="fungsipe-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#333333;strokeWidth=1.5;fontSize=11;fontStyle=1;labelBackgroundColor=none;fontColor=#c62828;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fungsipe-104" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="fungsipe-e106" edge="1" parent="1" source="fungsipe-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#333333;strokeWidth=1.5;fontSize=11;fontStyle=1;labelBackgroundColor=none;fontColor=#c62828;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fungsipe-106" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="fungsipe-e107" edge="1" parent="1" source="fungsipe-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#333333;strokeWidth=1.5;fontSize=11;fontStyle=1;labelBackgroundColor=none;fontColor=#c62828;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fungsipe-107" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="fungsipe-e108" edge="1" parent="1" source="fungsipe-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#333333;strokeWidth=1.5;fontSize=11;fontStyle=1;labelBackgroundColor=none;fontColor=#c62828;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fungsipe-108" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="fungsipe-e109" edge="1" parent="1" source="fungsipe-108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#333333;strokeWidth=1.5;fontSize=11;fontStyle=1;labelBackgroundColor=none;fontColor=#c62828;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fungsipe-109" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="fungsipe-e110" edge="1" parent="1" source="fungsipe-110" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#333333;strokeWidth=1.5;fontSize=11;fontStyle=1;labelBackgroundColor=none;fontColor=#c62828;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fungsipe-111" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -4073,7 +4043,7 @@
         <mxCell id="fungsipe-e118" edge="1" parent="1" source="fungsipe-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#333333;strokeWidth=1.5;fontSize=11;fontStyle=1;labelBackgroundColor=none;fontColor=#c62828;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="fungsipe-114" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="3200" y="4387" />
+              <mxPoint x="2877" y="4387" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -4081,8 +4051,8 @@
           <mxGeometry relative="1" x="-0.856" as="geometry">
             <mxPoint y="-13" as="offset" />
             <Array as="points">
-              <mxPoint x="2590" y="4512" />
-              <mxPoint x="2590" y="4732" />
+              <mxPoint x="2267" y="4512" />
+              <mxPoint x="2267" y="4732" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -4111,8 +4081,8 @@
         <mxCell id="fungsipe-e126" edge="1" parent="1" source="fungsipe-124" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#333333;strokeWidth=1.5;fontSize=11;fontStyle=1;labelBackgroundColor=none;fontColor=#c62828;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="fungsipe-123" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="3460" y="4541" />
-              <mxPoint x="3460" y="4408" />
+              <mxPoint x="3137" y="4541" />
+              <mxPoint x="3137" y="4408" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -4124,8 +4094,8 @@
         <mxCell id="fungsipe-e128" edge="1" parent="1" source="fungsipe-126" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#333333;strokeWidth=1.5;fontSize=11;fontStyle=1;labelBackgroundColor=none;fontColor=#c62828;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="fungsipe-125" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="4250" y="4142" />
-              <mxPoint x="4250" y="4628" />
+              <mxPoint x="3927" y="4142" />
+              <mxPoint x="3927" y="4628" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -4133,8 +4103,8 @@
           <mxGeometry relative="1" x="-0.937" as="geometry">
             <mxPoint y="-13" as="offset" />
             <Array as="points">
-              <mxPoint x="4250" y="4408" />
-              <mxPoint x="4250" y="4628" />
+              <mxPoint x="3927" y="4408" />
+              <mxPoint x="3927" y="4628" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -4302,26 +4272,26 @@
         </mxCell>
         <mxCell id="-N9atJj-TIv4-zG5xZ7--10" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="2915" y="4421" as="sourcePoint" />
-            <mxPoint x="2969.95" y="4421" as="targetPoint" />
+            <mxPoint x="2592" y="4421" as="sourcePoint" />
+            <mxPoint x="2646.95" y="4421" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="-N9atJj-TIv4-zG5xZ7--11" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="2911" y="4672" as="sourcePoint" />
-            <mxPoint x="2965.95" y="4672" as="targetPoint" />
+            <mxPoint x="2588" y="4672" as="sourcePoint" />
+            <mxPoint x="2642.95" y="4672" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="-N9atJj-TIv4-zG5xZ7--12" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="4164" y="4168" as="sourcePoint" />
-            <mxPoint x="4218.95" y="4168" as="targetPoint" />
+            <mxPoint x="3841" y="4168" as="sourcePoint" />
+            <mxPoint x="3895.95" y="4168" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="-N9atJj-TIv4-zG5xZ7--15" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="3788" y="4052" as="sourcePoint" />
-            <mxPoint x="3842.95" y="4052" as="targetPoint" />
+            <mxPoint x="3465" y="4052" as="sourcePoint" />
+            <mxPoint x="3519.95" y="4052" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>

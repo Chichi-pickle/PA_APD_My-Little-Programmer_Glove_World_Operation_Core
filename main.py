@@ -47,7 +47,7 @@ if __name__ == "__main__":
                             utility.clear_screen()
 
                         elif pilihan_pengguna == "4. Edit Profile":
-                            pengguna.edit_akun_pengunjung(
+                            pengguna.edit_akun_pengguna(
                                 user,
                                 cek_username_ganda=lambda username_baru, user_aktif: any(
                                     u.get("username") == username_baru and u.get("id", u.get("username")) != user_aktif
