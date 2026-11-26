@@ -291,8 +291,8 @@ def riwayat_booking(user, wahana_list=None, riwayat_list=None, waktu_mulai=None,
     print(tabel)
 
 
-def edit_akun_pengunjung(user, cek_username_ganda):
-    print(f"\n{Fore.CYAN}{Style.BRIGHT}=== Edit Akun Pengunjung ===")
+def edit_akun_pengguna(user, cek_username_ganda):
+    print(f"\n{Fore.CYAN}{Style.BRIGHT}=== Edit Akun Pengguna ===")
     username_lama = user["username"]
     password_lama = user["password"]
     user_aktif = user.get("id", username_lama)

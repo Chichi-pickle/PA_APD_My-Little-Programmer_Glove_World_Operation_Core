@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 from colorama import Fore, Style, init
 from InquirerPy import inquirer
 from utility import load_data, save_data, input_angka_rekursif, input_teks_wajib
@@ -6,8 +5,6 @@ from utility import load_data, save_data, input_angka_rekursif, input_teks_wajib
 init(autoreset=True)
 
 WAHANA_FILE = "wahana.json"
-HISTORY_FILE = "history.json"
-
 
 def _buat_id_tersedia(wahana_list):
     id_terpakai = {w.get("id") for w in wahana_list if isinstance(w.get("id"), int)}
