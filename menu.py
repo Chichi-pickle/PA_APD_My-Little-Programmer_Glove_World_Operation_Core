@@ -49,7 +49,7 @@ def menu_CRUD():
         message="Pilih opsi 1~6:",
         choices=[
             "1. Tambah Wahana",
-            "2. Edit harga/kapasitas",
+            "2. Edit Wahana",
             "3. Hapus Wahana",
             "4. Update Status",
             "5. Tampilkan Wahana",
